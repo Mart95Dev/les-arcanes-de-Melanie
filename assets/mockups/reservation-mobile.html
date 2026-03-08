@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#d39e17",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#211d11",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen pb-24">
+<!-- Header Navigation -->
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10">
+<div class="flex items-center p-4 justify-between max-w-md mx-auto">
+<button class="text-primary p-2">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="text-lg font-bold tracking-tight">Réserver une séance</h1>
+<button class="text-primary p-2">
+<span class="material-symbols-outlined">help_outline</span>
+</button>
+</div>
+</header>
+<main class="max-w-md mx-auto px-4 py-6 space-y-8">
+<!-- Stepper -->
+<div class="flex items-center justify-between px-6 relative">
+<div class="absolute top-1/2 left-0 w-full h-0.5 bg-primary/20 -translate-y-1/2 -z-10"></div>
+<!-- Step 1: Tirage -->
+<div class="flex flex-col items-center gap-2">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-background-dark font-bold shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined text-xl">style</span>
+</div>
+<span class="text-xs font-semibold text-primary">Tirage</span>
+</div>
+<!-- Step 2: Date -->
+<div class="flex flex-col items-center gap-2">
+<div class="w-10 h-10 rounded-full bg-background-dark border-2 border-primary/40 flex items-center justify-center text-primary/40 font-bold">
+<span class="material-symbols-outlined text-xl">calendar_month</span>
+</div>
+<span class="text-xs font-medium text-slate-500">Date</span>
+</div>
+<!-- Step 3: Paiement -->
+<div class="flex flex-col items-center gap-2">
+<div class="w-10 h-10 rounded-full bg-background-dark border-2 border-primary/40 flex items-center justify-center text-primary/40 font-bold">
+<span class="material-symbols-outlined text-xl">payments</span>
+</div>
+<span class="text-xs font-medium text-slate-500">Paiement</span>
+</div>
+</div>
+<!-- Section 1: Selection Tirage -->
+<section class="space-y-4">
+<div class="flex flex-col gap-1">
+<h2 class="text-xl font-bold">Choisissez votre guidance</h2>
+<p class="text-sm text-slate-500 dark:text-slate-400">Sélectionnez le format qui résonne avec vos besoins actuels.</p>
+</div>
+<div class="grid grid-cols-1 gap-4">
+<!-- Option 1 -->
+<div class="group relative flex flex-col p-4 rounded-xl border-2 border-primary bg-primary/5 cursor-pointer">
+<div class="flex justify-between items-start mb-2">
+<span class="material-symbols-outlined text-primary text-3xl">auto_awesome</span>
+<div class="bg-primary text-background-dark text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">Populaire</div>
+</div>
+<h3 class="font-bold text-lg">Croix Celtique</h3>
+<p class="text-xs text-slate-500 dark:text-slate-400 mb-4 line-clamp-2">Analyse profonde d'une situation complexe et de son évolution future.</p>
+<div class="flex items-center justify-between mt-auto pt-2 border-t border-primary/10">
+<span class="text-xs font-medium text-slate-500">60 minutes</span>
+<span class="font-bold text-primary">75 €</span>
+</div>
+<div class="absolute top-4 right-4 h-6 w-6 rounded-full bg-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-sm text-background-dark font-bold">check</span>
+</div>
+</div>
+<!-- Option 2 -->
+<div class="group relative flex flex-col p-4 rounded-xl border-2 border-primary/10 bg-slate-100/50 dark:bg-slate-800/20 cursor-pointer hover:border-primary/40 transition-colors">
+<div class="flex justify-between items-start mb-2">
+<span class="material-symbols-outlined text-primary/60 text-3xl">favorite</span>
+</div>
+<h3 class="font-bold text-lg">Guidance Relationnelle</h3>
+<p class="text-xs text-slate-500 dark:text-slate-400 mb-4 line-clamp-2">Focus sur les liens affectifs, la communication et les blocages du cœur.</p>
+<div class="flex items-center justify-between mt-auto pt-2 border-t border-primary/10">
+<span class="text-xs font-medium text-slate-500">45 minutes</span>
+<span class="font-bold text-primary">60 €</span>
+</div>
+</div>
+<!-- Option 3 -->
+<div class="group relative flex flex-col p-4 rounded-xl border-2 border-primary/10 bg-slate-100/50 dark:bg-slate-800/20 cursor-pointer hover:border-primary/40 transition-colors">
+<div class="flex justify-between items-start mb-2">
+<span class="material-symbols-outlined text-primary/60 text-3xl">work</span>
+</div>
+<h3 class="font-bold text-lg">Chemin de Carrière</h3>
+<p class="text-xs text-slate-500 dark:text-slate-400 mb-4 line-clamp-2">Explorez vos opportunités professionnelles et vos talents cachés.</p>
+<div class="flex items-center justify-between mt-auto pt-2 border-t border-primary/10">
+<span class="text-xs font-medium text-slate-500">30 minutes</span>
+<span class="font-bold text-primary">45 €</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 2: Calendar Mini-View (Preview) -->
+<section class="space-y-4">
+<h2 class="text-xl font-bold">Disponibilités</h2>
+<div class="bg-slate-100 dark:bg-slate-800/40 rounded-xl p-4">
+<div class="flex justify-between items-center mb-4">
+<span class="font-bold">Octobre 2024</span>
+<div class="flex gap-2">
+<button class="p-1 rounded bg-background-light dark:bg-background-dark border border-primary/10"><span class="material-symbols-outlined text-sm">chevron_left</span></button>
+<button class="p-1 rounded bg-background-light dark:bg-background-dark border border-primary/10"><span class="material-symbols-outlined text-sm">chevron_right</span></button>
+</div>
+</div>
+<div class="grid grid-cols-7 gap-2 text-center text-[10px] font-bold text-slate-400 uppercase mb-2">
+<span>L</span><span>M</span><span>M</span><span>J</span><span>V</span><span>S</span><span>D</span>
+</div>
+<div class="grid grid-cols-7 gap-2 text-center">
+<span class="p-2 text-sm text-slate-700 dark:text-slate-500">26</span>
+<span class="p-2 text-sm text-slate-700 dark:text-slate-500">27</span>
+<span class="p-2 text-sm text-slate-700 dark:text-slate-500">28</span>
+<span class="p-2 text-sm text-slate-700 dark:text-slate-500">29</span>
+<span class="p-2 text-sm text-slate-700 dark:text-slate-500">30</span>
+<button class="p-2 text-sm rounded-lg bg-primary text-background-dark font-bold">01</button>
+<button class="p-2 text-sm rounded-lg border border-primary/20 hover:bg-primary/10">02</button>
+</div>
+<div class="mt-6 space-y-3">
+<p class="text-xs font-semibold uppercase tracking-widest text-primary/70">Créneaux disponibles</p>
+<div class="flex flex-wrap gap-2">
+<button class="px-4 py-2 rounded-lg bg-background-light dark:bg-background-dark border border-primary/20 text-xs font-medium hover:bg-primary hover:text-background-dark transition-all">09:00</button>
+<button class="px-4 py-2 rounded-lg bg-background-light dark:bg-background-dark border border-primary/20 text-xs font-medium hover:bg-primary hover:text-background-dark transition-all">11:30</button>
+<button class="px-4 py-2 rounded-lg bg-primary text-background-dark text-xs font-bold">14:00</button>
+<button class="px-4 py-2 rounded-lg bg-background-light dark:bg-background-dark border border-primary/20 text-xs font-medium hover:bg-primary hover:text-background-dark transition-all">16:30</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 3: Summary & Payment -->
+<section class="space-y-4">
+<h2 class="text-xl font-bold">Résumé &amp; Paiement</h2>
+<div class="bg-primary/5 border border-primary/20 rounded-xl p-4 space-y-4">
+<div class="space-y-2">
+<div class="flex justify-between text-sm">
+<span class="text-slate-500">Service</span>
+<span class="font-bold">Croix Celtique</span>
+</div>
+<div class="flex justify-between text-sm">
+<span class="text-slate-500">Date &amp; Heure</span>
+<span class="font-bold">01 Oct. à 14:00</span>
+</div>
+<div class="flex justify-between pt-2 border-t border-primary/10">
+<span class="font-bold">Total</span>
+<span class="font-extrabold text-primary text-lg">75,00 €</span>
+</div>
+</div>
+<form class="space-y-3 pt-2">
+<input class="w-full bg-background-light dark:bg-background-dark border-primary/20 rounded-lg text-sm px-4 py-3 focus:ring-primary focus:border-primary" placeholder="Nom complet" type="text"/>
+<input class="w-full bg-background-light dark:bg-background-dark border-primary/20 rounded-lg text-sm px-4 py-3 focus:ring-primary focus:border-primary" placeholder="Email" type="email"/>
+</form>
+<div class="space-y-3 pt-2">
+<button class="w-full flex items-center justify-center gap-3 bg-[#0070ba] text-white font-bold py-3 rounded-lg hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined">payments</span>
+                        PayPal
+                    </button>
+<button class="w-full flex items-center justify-center gap-3 bg-slate-900 dark:bg-slate-100 text-slate-100 dark:text-slate-900 font-bold py-3 rounded-lg hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined">credit_card</span>
+                        Carte Bancaire
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 z-50 bg-background-light dark:bg-background-dark border-t border-primary/10 px-6 pb-6 pt-3">
+<div class="max-w-md mx-auto flex justify-between items-center">
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-medium">Accueil</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">style</span>
+<span class="text-[10px] font-medium">Tirages</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined fill-1">calendar_month</span>
+<span class="text-[10px] font-bold">Réserver</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-medium">Profil</span>
+</a>
+</div>
+</nav>
+<!-- Background Decorative Element -->
+<div class="fixed top-0 right-0 -z-20 w-64 h-64 bg-primary/10 blur-[100px] rounded-full pointer-events-none"></div>
+<div class="fixed bottom-0 left-0 -z-20 w-64 h-64 bg-primary/5 blur-[80px] rounded-full pointer-events-none"></div>
+</body></html>

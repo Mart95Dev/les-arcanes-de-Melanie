@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;700&amp;family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#d39e17",
+              "background-light": "#f8f7f6",
+              "background-dark": "#1A1A2E",
+            },
+            fontFamily: {
+              "display": ["Manrope", "sans-serif"],
+              "serif": ["Playfair Display", "serif"]
+            },
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .mystical-bg {
+            background-image: radial-gradient(circle at 50% 50%, rgba(211, 158, 23, 0.05) 0%, transparent 70%);
+        }
+        .pattern-overlay {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0l2.5 7.5L40 10l-7.5 2.5L30 20l-2.5-7.5L20 10l7.5-2.5L30 0z' fill='%23d39e17' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 overflow-hidden">
+<!-- Mobile Menu Overlay -->
+<div class="relative flex h-screen w-full flex-col bg-background-light dark:bg-background-dark overflow-hidden">
+<!-- Background Decorations -->
+<div class="absolute inset-0 pattern-overlay opacity-30 pointer-events-none"></div>
+<div class="absolute inset-0 mystical-bg pointer-events-none"></div>
+<!-- Top Bar / Close Button -->
+<div class="relative z-10 flex items-center p-6 justify-end">
+<button class="flex items-center justify-center rounded-full w-12 h-12 bg-primary/10 hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined text-primary text-3xl">close</span>
+</button>
+</div>
+<!-- Navigation Content -->
+<div class="relative z-10 flex flex-col flex-1 items-center justify-center px-6">
+<nav class="w-full">
+<ul class="flex flex-col items-center gap-8 md:gap-12">
+<li>
+<a class="group flex flex-col items-center" href="#">
+<span class="font-serif text-4xl md:text-5xl text-slate-100 group-hover:text-primary transition-colors">Home</span>
+<div class="h-px w-0 group-hover:w-12 bg-primary transition-all duration-300 mt-2"></div>
+</a>
+</li>
+<li>
+<a class="group flex flex-col items-center" href="#">
+<span class="font-serif text-4xl md:text-5xl text-slate-100 group-hover:text-primary transition-colors">Tarot Readings</span>
+<div class="h-px w-0 group-hover:w-12 bg-primary transition-all duration-300 mt-2"></div>
+</a>
+</li>
+<li>
+<a class="group flex flex-col items-center" href="#">
+<span class="font-serif text-4xl md:text-5xl text-slate-100 group-hover:text-primary transition-colors">Daily Guidance</span>
+<div class="h-px w-0 group-hover:w-12 bg-primary transition-all duration-300 mt-2"></div>
+</a>
+</li>
+<li>
+<a class="group flex flex-col items-center" href="#">
+<span class="font-serif text-4xl md:text-5xl text-slate-100 group-hover:text-primary transition-colors">The Boutique</span>
+<div class="h-px w-0 group-hover:w-12 bg-primary transition-all duration-300 mt-2"></div>
+</a>
+</li>
+<li>
+<a class="group flex flex-col items-center" href="#">
+<span class="font-serif text-4xl md:text-5xl text-slate-100 group-hover:text-primary transition-colors">About Me</span>
+<div class="h-px w-0 group-hover:w-12 bg-primary transition-all duration-300 mt-2"></div>
+</a>
+</li>
+<li>
+<a class="group flex flex-col items-center" href="#">
+<span class="font-serif text-4xl md:text-5xl text-slate-100 group-hover:text-primary transition-colors">Contact</span>
+<div class="h-px w-0 group-hover:w-12 bg-primary transition-all duration-300 mt-2"></div>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+<!-- Mystical Icon Footer -->
+<div class="relative z-10 p-12 flex flex-col items-center gap-6">
+<div class="flex gap-8">
+<a class="flex flex-col items-center gap-2 group" href="#">
+<div class="w-10 h-10 rounded-full border border-primary/30 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-background-dark transition-all">
+<span class="material-symbols-outlined text-xl">star</span>
+</div>
+<span class="text-xs uppercase tracking-widest text-primary/60">Instagram</span>
+</a>
+<a class="flex flex-col items-center gap-2 group" href="#">
+<div class="w-10 h-10 rounded-full border border-primary/30 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-background-dark transition-all">
+<span class="material-symbols-outlined text-xl">auto_awesome</span>
+</div>
+<span class="text-xs uppercase tracking-widest text-primary/60">Pinterest</span>
+</a>
+<a class="flex flex-col items-center gap-2 group" href="#">
+<div class="w-10 h-10 rounded-full border border-primary/30 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-background-dark transition-all">
+<span class="material-symbols-outlined text-xl">storm</span>
+</div>
+<span class="text-xs uppercase tracking-widest text-primary/60">Youtube</span>
+</a>
+</div>
+<div class="mt-4 opacity-20">
+<img alt="Decorative separator" data-alt="Small celestial decorative icons gold" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtG8Y1DisYqCOXqVDBiIFmCeybMGM0D0vLvFvbjb_NWfeW9NUgphG2r22tbl05_5U4rkKcSkPsTkkZOvbVbzUO5ilm-iSYkrRYVJC2-u-LHnoApW0Ri0RSOZi0KRKnBFRIt3AVxbFkbkUUWfCAAcREBcURMscPZ7fRtVhIbyB5Hl1Sj0R68BX5czTY0aotlYA15uYZFHWtn3kqMbkDSuGKVF4pmdqiKX5bYXHu-2T7EIxdbryquFW6eR6eDplM2NuYjLNROPKYZzo"/>
+</div>
+</div>
+<!-- Background Symbol -->
+<div class="absolute -bottom-20 -left-20 opacity-5 pointer-events-none">
+<span class="material-symbols-outlined text-[300px] text-primary">brightness_7</span>
+</div>
+<div class="absolute -top-20 -right-20 opacity-5 pointer-events-none">
+<span class="material-symbols-outlined text-[300px] text-primary">nights_stay</span>
+</div>
+</div>
+</body></html>

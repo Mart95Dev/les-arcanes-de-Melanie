@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mon Histoire — Les Arcanes de Mélanie</title>
+  <meta name="description" content="Découvrez le parcours de Mélanie, tarologue passionnée. De la découverte du Tarot de Marseille à la création des Arcanes de Mélanie, un cheminement guidé par l'intuition.">
+
+  <!-- Preconnect Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Phosphor Icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/rgpd.css">
+</head>
+<body>
+
+  <!-- Skip link -->
+  <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header__inner">
+      <a href="index.html" class="header__logo">
+        <i class="ph ph-star-four header__logo-icon"></i>
+        <span class="header__logo-text">Les Arcanes de Mélanie</span>
+      </a>
+
+      <nav class="nav">
+        <a href="index.html" class="nav__link">Accueil</a>
+        <a href="prestations.html" class="nav__link">Prestations</a>
+        <a href="mon-histoire.html" class="nav__link nav__link--active">Mon Histoire</a>
+        <a href="reservation.html" class="nav__link">Réservation</a>
+        <a href="contact.html" class="nav__link">Contact</a>
+      </nav>
+
+      <a href="reservation.html" class="btn btn--primary btn--small btn--rounded header__cta">Réserver</a>
+
+      <button class="hamburger" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu">
+    <a href="index.html" class="mobile-menu__link">Accueil</a>
+    <a href="prestations.html" class="mobile-menu__link">Prestations</a>
+    <a href="mon-histoire.html" class="mobile-menu__link">Mon Histoire</a>
+    <a href="reservation.html" class="mobile-menu__link">Réservation</a>
+    <a href="contact.html" class="mobile-menu__link">Contact</a>
+    <div class="mobile-menu__socials">
+      <a href="#" class="mobile-menu__social-link" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+      <a href="#" class="mobile-menu__social-link" aria-label="Facebook"><i class="ph ph-facebook-logo"></i></a>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main id="main-content">
+
+    <!-- Hero -->
+    <section class="container reveal" style="padding-top: var(--space-sm);">
+      <div class="story-hero" style="background-image: linear-gradient(to top, rgba(26, 26, 46, 0.95) 0%, rgba(26, 26, 46, 0.4) 40%, transparent 100%), url('https://lh3.googleusercontent.com/aida-public/AB6AXuA03QeH6XHBjbjgv7fd0Txr6C7eKjTZ_wsCY6AynnrVmofbEmCSWCZbfKE7_MRp7NadrpGSKyrItbiGN4nWJ8xToh3uHIWUNqkBxtekxvgoBPymZE-CnYQN7i339B1-Ggsd1eh3H6979FBuslKhXIOa1Q1ACPDETmzrjVsEcp5w5PIZ8fJA59Aci32ff2fFn2WKeAJMyUMdxPzIVv2xG9FRKc45LCMKl-ICevo4uFE03TQQLDoJK3VcND3HBG1NwuWYz-wG3Q4Q7kg');">
+        <div class="story-hero__content">
+          <span class="card__badge">Tarologue Holistique</span>
+          <h1 class="story-hero__title">Mon Cheminement</h1>
+        </div>
+      </div>
+    </section>
+
+    <!-- Timeline -->
+    <section class="section container reveal">
+      <div class="timeline">
+        <!-- Step 1 -->
+        <div class="timeline__marker">
+          <div class="timeline__icon">
+            <i class="ph ph-sparkle"></i>
+          </div>
+          <div class="timeline__line"></div>
+        </div>
+        <div class="timeline__content">
+          <h3 class="timeline__date">2018 — L'Éveil</h3>
+          <p class="timeline__title">Première rencontre avec le Tarot de Marseille.</p>
+          <p class="timeline__text">Une intuition soudaine qui a ouvert les portes d'une perception nouvelle.</p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="timeline__marker">
+          <div class="timeline__icon">
+            <i class="ph ph-book-open"></i>
+          </div>
+          <div class="timeline__line"></div>
+        </div>
+        <div class="timeline__content">
+          <h3 class="timeline__date">2020 — Apprentissage</h3>
+          <p class="timeline__title">Étude intensive des Arcanes Majeurs.</p>
+          <p class="timeline__text">Années dédiées à la symbolique sacrée et à la psychologie des profondeurs.</p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="timeline__marker">
+          <div class="timeline__icon timeline__icon--active">
+            <i class="ph ph-brain"></i>
+          </div>
+          <div class="timeline__line timeline__line--fade"></div>
+        </div>
+        <div class="timeline__content">
+          <h3 class="timeline__date">Aujourd'hui — Transmission</h3>
+          <p class="timeline__title">Fondation du cabinet de guidance.</p>
+          <p class="timeline__text">Accompagner les âmes vers leur propre vérité à travers les cartes.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Philosophie -->
+    <section class="section reveal" style="background: rgba(212, 160, 23, 0.05);">
+      <div class="container" style="text-align: center;">
+        <i class="ph ph-quotes" style="font-size: 2.5rem; color: var(--color-gold); display: block; margin-bottom: var(--space-md);"></i>
+        <blockquote class="blockquote" style="max-width: 400px; margin: 0 auto;">
+          "Le Tarot n'est pas là pour prédire l'avenir, mais pour vous donner les clés de le construire."
+        </blockquote>
+        <p style="color: var(--color-gold); font-family: var(--font-ui); font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; font-size: 0.75rem; margin-top: var(--space-md);">Ma Philosophie</p>
+      </div>
+    </section>
+
+    <!-- Valeurs -->
+    <section class="section container reveal">
+      <h2 class="section__title">Mes Valeurs Fondamentales</h2>
+      <div class="section__divider"></div>
+      <div class="values-grid">
+        <div class="value-block">
+          <div class="value-block__icon"><i class="ph ph-eye"></i></div>
+          <div>
+            <h4 class="value-block__title">Intuition</h4>
+            <p class="value-block__text">Écouter ce que le cœur chuchote entre les symboles.</p>
+          </div>
+        </div>
+        <div class="value-block">
+          <div class="value-block__icon"><i class="ph ph-shield-check"></i></div>
+          <div>
+            <h4 class="value-block__title">Éthique</h4>
+            <p class="value-block__text">Un cadre bienveillant, confidentiel et sans jugement.</p>
+          </div>
+        </div>
+        <div class="value-block">
+          <div class="value-block__icon"><i class="ph ph-lightbulb"></i></div>
+          <div>
+            <h4 class="value-block__title">Clarté</h4>
+            <p class="value-block__text">Apporter une lumière précise sur vos questionnements.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <a href="index.html" class="footer__logo">
+        <i class="ph ph-star-four footer__logo-icon"></i>
+        <span class="footer__logo-text">Les Arcanes de Mélanie</span>
+      </a>
+
+      <div class="footer__links">
+        <a href="mentions-legales.html" class="footer__link">Mentions Légales</a>
+        <a href="cgv.html" class="footer__link">CGV</a>
+        <a href="politique-confidentialite.html" class="footer__link">Politique de Confidentialité</a>
+        <a href="#" class="footer__link" onclick="CookieConsent.showPreferences(); return false;">Paramètres cookies</a>
+      </div>
+
+      <div class="footer__socials">
+        <a href="#" class="footer__social-link" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+        <a href="#" class="footer__social-link" aria-label="Facebook"><i class="ph ph-facebook-logo"></i></a>
+        <a href="mailto:contact@lesarcanesdemelanie.fr" class="footer__social-link" aria-label="Email"><i class="ph ph-envelope"></i></a>
+      </div>
+    </div>
+    <p class="footer__copyright">&copy; 2026 Les Arcanes de Mélanie. Tous droits réservés.</p>
+  </footer>
+
+  <!-- Bottom Navigation Mobile -->
+  <nav class="bottom-nav" aria-label="Navigation mobile">
+    <a href="index.html" class="bottom-nav__link"><i class="ph ph-house"></i><span>Accueil</span></a>
+    <a href="mon-histoire.html" class="bottom-nav__link bottom-nav__link--active"><i class="ph ph-scroll-fill"></i><span>Histoire</span></a>
+    <a href="prestations.html" class="bottom-nav__link"><i class="ph ph-cards-three"></i><span>Tarot</span></a>
+    <a href="contact.html" class="bottom-nav__link"><i class="ph ph-chat-circle"></i><span>Contact</span></a>
+  </nav>
+
+  <!-- JS -->
+  <script src="js/main.js"></script>
+  <script src="js/rgpd.js"></script>
+</body>
+</html>

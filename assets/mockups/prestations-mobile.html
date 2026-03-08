@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#d39e17",
+              "background-light": "#f8f7f6",
+              "background-dark": "#211d11",
+            },
+            fontFamily: {
+              "display": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      body {
+        font-family: 'Manrope', sans-serif;
+      }
+      .mystic-gradient {
+        background: radial-gradient(circle at top right, rgba(211, 158, 23, 0.15), transparent),
+                    radial-gradient(circle at bottom left, rgba(211, 158, 23, 0.05), transparent);
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/20">
+<div class="flex items-center p-4 justify-between max-w-md mx-auto w-full">
+<div class="text-primary flex size-10 shrink-0 items-center justify-center">
+<span class="material-symbols-outlined">arrow_back</span>
+</div>
+<h1 class="text-primary text-xl font-bold leading-tight tracking-tight flex-1 text-center font-display">Mes Tirages</h1>
+<div class="flex w-10 items-center justify-end">
+<button class="flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">shopping_bag</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-1 overflow-y-auto pb-24 mystic-gradient">
+<div class="px-4 pt-8 pb-4 text-center">
+<h2 class="text-primary text-3xl font-extrabold tracking-tight mb-2">Mes Tirages de Tarot</h2>
+<p class="text-slate-600 dark:text-slate-400 text-sm italic">Éclairez votre chemin à travers les arcanes</p>
+</div>
+<div class="space-y-6 px-4 py-6">
+<div class="flex flex-col overflow-hidden rounded-xl bg-white dark:bg-primary/5 border border-primary/20 shadow-xl">
+<div class="relative h-48 w-full bg-cover bg-center" data-alt="Tarot cards spread on a dark wooden table with candles" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBkFmaNyT_kbqmMBvuNBwVBxNhmg3cisOPo2nRxZEUYq7RlaphbvtucNzzitsZWo2rCmpHQC8zom5cbJXemmJnEMPDgA2EdecMjUjMcKLzMfU6xkrTnnIGmTw-lArgDo8kXZUlNziwPMzNNk5im5FbI_Zc7o8vsEjmFOwFHGIn_GVo-qhM6CHsMfs9naE9tcoxHhGafNe80zTWVW2MFvAJqrQ58UBhM0a68mgKIdb81wyVFiJsOQKkThFoFqR-JTZYBheLEDEJBCL4')">
+<div class="absolute top-3 left-3">
+<span class="bg-primary text-background-dark px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">Format Visio</span>
+</div>
+</div>
+<div class="p-5 flex flex-col gap-3">
+<div class="flex justify-between items-start">
+<h3 class="text-xl font-bold text-slate-900 dark:text-slate-100">Tirage Relationnel</h3>
+<span class="text-2xl font-black text-primary">75€</span>
+</div>
+<div class="flex items-center gap-2 text-primary/80 text-xs font-medium">
+<span class="material-symbols-outlined text-sm">schedule</span>
+<span>60 minutes</span>
+</div>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                        Une session approfondie pour explorer vos liens affectifs, comprendre les blocages actuels et entrevoir l'évolution de votre avenir amoureux.
+                    </p>
+<button class="mt-2 w-full bg-primary hover:bg-primary/90 text-background-dark font-bold py-3 rounded-lg transition-colors flex items-center justify-center gap-2">
+<span>Réserver ma séance</span>
+<span class="material-symbols-outlined text-sm">calendar_today</span>
+</button>
+</div>
+</div>
+<div class="flex flex-col overflow-hidden rounded-xl bg-white dark:bg-primary/5 border border-primary/20 shadow-xl">
+<div class="relative h-48 w-full bg-cover bg-center" data-alt="Detail of a vintage tarot card showing mystical symbols" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAwMp957FyAyg2rVZ11Wnt2Cg1HM_XIAawOrs8WiyRLQCpvQ26pQxLwD5at44HCHHM-Ys4bebizlYeOrK2Tz8Y-deZQfZ5ldeBCQuud2gkilyBGz0HIqaBbhXlhChUaBU24n1uWdQqdx_r_tScWGhkiMEwVpVn3r0Ef6JBuqRL744hHFExJ3DyJxG_9Ze87eEvGGhXn-etRw3mdMkF7IMXGP3rtgoYJkVvCIKgeldexHCp0UbooV5hT0qWo5frM6UtqHR46Elz-9Zg')">
+<div class="absolute top-3 left-3">
+<span class="bg-primary text-background-dark px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">Format Email</span>
+</div>
+</div>
+<div class="p-5 flex flex-col gap-3">
+<div class="flex justify-between items-start">
+<h3 class="text-xl font-bold text-slate-900 dark:text-slate-100">Guidance Express</h3>
+<span class="text-2xl font-black text-primary">40€</span>
+</div>
+<div class="flex items-center gap-2 text-primary/80 text-xs font-medium">
+<span class="material-symbols-outlined text-sm">mail</span>
+<span>Réponse sous 48h</span>
+</div>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                        Une question précise analysée par les arcanes majeurs. Idéal pour une interrogation ponctuelle nécessitant une réponse claire et rapide par écrit.
+                    </p>
+<button class="mt-2 w-full bg-primary hover:bg-primary/90 text-background-dark font-bold py-3 rounded-lg transition-colors flex items-center justify-center gap-2">
+<span>Poser ma question</span>
+<span class="material-symbols-outlined text-sm">send</span>
+</button>
+</div>
+</div>
+<div class="flex flex-col overflow-hidden rounded-xl bg-white dark:bg-primary/5 border border-primary/20 shadow-xl">
+<div class="relative h-48 w-full bg-cover bg-center" data-alt="A circle of tarot cards with a crystal ball in the middle" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDyy4dbF-CbAStTcfMwUOTMas77uZQJS1zbSGTWd3OjrkHictp_yqUgrdsFFb3CNo-JRk3HZ2MBAzbIWfXADLxeQQSehmuY0xMZPDQFpkkC7UZ6pijNxP6Ye1rfyHoBgltvIhM_n8QBEifziaBiZ4LxxoW3kShEF9KVWCNrdp0SMcgeoEIRPbZDAn5gSpCi9AbNewh8Ks7DBpfooWQPwPrcEOoB_M-gl9IB92vl0v2YCDphGBqvRVeFoc27fE_UhPgVtFdtSpjU66k')">
+<div class="absolute top-3 left-3">
+<span class="bg-primary text-background-dark px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">Format Visio</span>
+</div>
+</div>
+<div class="p-5 flex flex-col gap-3">
+<div class="flex justify-between items-start">
+<h3 class="text-xl font-bold text-slate-900 dark:text-slate-100">Roue de l'Année</h3>
+<span class="text-2xl font-black text-primary">120€</span>
+</div>
+<div class="flex items-center gap-2 text-primary/80 text-xs font-medium">
+<span class="material-symbols-outlined text-sm">schedule</span>
+<span>90 minutes</span>
+</div>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                        Un grand tirage de 12 cartes pour explorer les tendances de vos 12 prochains mois. Une vision panoramique pour anticiper vos cycles personnels.
+                    </p>
+<button class="mt-2 w-full bg-primary hover:bg-primary/90 text-background-dark font-bold py-3 rounded-lg transition-colors flex items-center justify-center gap-2">
+<span>Anticiper mon année</span>
+<span class="material-symbols-outlined text-sm">auto_awesome</span>
+</button>
+</div>
+</div>
+</div>
+<section class="mt-12 px-4 pb-12">
+<h2 class="text-primary text-2xl font-bold mb-6 text-center">Questions Fréquentes</h2>
+<div class="space-y-4">
+<div class="border border-primary/20 rounded-lg p-4 bg-primary/5">
+<div class="flex justify-between items-center gap-2">
+<h4 class="font-bold text-sm text-slate-100">Comment se déroule une séance ?</h4>
+<span class="material-symbols-outlined text-primary">expand_more</span>
+</div>
+<p class="mt-3 text-sm text-slate-400 leading-relaxed">
+                        Chaque session débute par un temps d'échange pour cibler votre intention. Nous procédons ensuite au tirage et à l'interprétation en direct.
+                    </p>
+</div>
+<div class="border border-primary/20 rounded-lg p-4 bg-primary/5">
+<div class="flex justify-between items-center gap-2">
+<h4 class="font-bold text-sm text-slate-100">Dois-je préparer des questions ?</h4>
+<span class="material-symbols-outlined text-primary">expand_more</span>
+</div>
+<p class="mt-3 text-sm text-slate-400 leading-relaxed hidden">
+                        Il est conseillé d'avoir une thématique ou des interrogations précises, mais le tarot peut aussi offrir une guidance générale sans question préalable.
+                    </p>
+</div>
+<div class="border border-primary/20 rounded-lg p-4 bg-primary/5">
+<div class="flex justify-between items-center gap-2">
+<h4 class="font-bold text-sm text-slate-100">Visio ou Email : que choisir ?</h4>
+<span class="material-symbols-outlined text-primary">expand_more</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<nav class="fixed bottom-0 left-0 right-0 bg-background-dark border-t border-primary/20 px-4 pb-4 pt-2 z-50">
+<div class="flex gap-2 max-w-md mx-auto">
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-primary/60" href="#">
+<span class="material-symbols-outlined">home</span>
+<p class="text-[10px] font-medium leading-normal">Accueil</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">auto_awesome</span>
+<p class="text-[10px] font-medium leading-normal">Tirages</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-primary/60" href="#">
+<span class="material-symbols-outlined">calendar_month</span>
+<p class="text-[10px] font-medium leading-normal">Rendez-vous</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-primary/60" href="#">
+<span class="material-symbols-outlined">person</span>
+<p class="text-[10px] font-medium leading-normal">Profil</p>
+</a>
+</div>
+</nav>
+</body></html>

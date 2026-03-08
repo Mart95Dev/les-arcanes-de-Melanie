@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Réserver une séance — Les Arcanes de Mélanie</title>
+  <meta name="description" content="Réservez votre séance de tarot personnalisée avec Mélanie. Choisissez votre tirage, sélectionnez un créneau et payez en toute sécurité.">
+
+  <!-- Preconnect Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Phosphor Icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/rgpd.css">
+</head>
+<body>
+
+  <!-- Skip link -->
+  <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header__inner">
+      <a href="index.html" class="header__logo">
+        <i class="ph ph-star-four header__logo-icon"></i>
+        <span class="header__logo-text">Les Arcanes de Mélanie</span>
+      </a>
+
+      <nav class="nav">
+        <a href="index.html" class="nav__link">Accueil</a>
+        <a href="prestations.html" class="nav__link">Prestations</a>
+        <a href="mon-histoire.html" class="nav__link">Mon Histoire</a>
+        <a href="reservation.html" class="nav__link nav__link--active">Réservation</a>
+        <a href="contact.html" class="nav__link">Contact</a>
+      </nav>
+
+      <a href="reservation.html" class="btn btn--primary btn--small btn--rounded header__cta">Réserver</a>
+
+      <button class="hamburger" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu">
+    <a href="index.html" class="mobile-menu__link">Accueil</a>
+    <a href="prestations.html" class="mobile-menu__link">Prestations</a>
+    <a href="mon-histoire.html" class="mobile-menu__link">Mon Histoire</a>
+    <a href="reservation.html" class="mobile-menu__link">Réservation</a>
+    <a href="contact.html" class="mobile-menu__link">Contact</a>
+    <div class="mobile-menu__socials">
+      <a href="#" class="mobile-menu__social-link" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+      <a href="#" class="mobile-menu__social-link" aria-label="Facebook"><i class="ph ph-facebook-logo"></i></a>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main id="main-content">
+
+    <!-- Reservation Header -->
+    <section class="section container reveal">
+      <div class="reservation-header">
+        <a href="prestations.html" class="reservation-header__back" aria-label="Retour aux prestations">
+          <i class="ph ph-arrow-left"></i>
+        </a>
+        <h1 class="reservation-header__title">Réserver une séance</h1>
+      </div>
+
+      <!-- Stepper -->
+      <div class="stepper">
+        <div class="stepper__step">
+          <div class="stepper__circle stepper__circle--active">1</div>
+          <span class="stepper__label stepper__label--active">Tirage</span>
+        </div>
+        <div class="stepper__step">
+          <div class="stepper__circle stepper__circle--inactive">2</div>
+          <span class="stepper__label stepper__label--inactive">Date</span>
+        </div>
+        <div class="stepper__step">
+          <div class="stepper__circle stepper__circle--inactive">3</div>
+          <span class="stepper__label stepper__label--inactive">Paiement</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Step 1: Choisir le tirage -->
+    <section class="section container reveal">
+      <h2 class="section__title">Choisissez votre guidance</h2>
+      <div class="section__divider"></div>
+
+      <div class="cards-grid cards-grid--2">
+
+        <!-- Tirage Flash -->
+        <div class="card card--selectable" role="button" tabindex="0" aria-label="Sélectionner Tirage Flash">
+          <span class="card__check"><i class="ph ph-check"></i></span>
+          <h3 class="card__title">Tirage Flash</h3>
+          <p class="card__description">1 question, 3 cartes pour une réponse rapide.</p>
+          <div class="card__footer">
+            <span class="card__duration"><i class="ph ph-clock"></i> 15 min</span>
+            <span class="card__price">25 €</span>
+          </div>
+        </div>
+
+        <!-- Tirage Guidance -->
+        <div class="card card--selectable" role="button" tabindex="0" aria-label="Sélectionner Tirage Guidance">
+          <span class="card__check"><i class="ph ph-check"></i></span>
+          <h3 class="card__title">Tirage Guidance</h3>
+          <p class="card__description">Vision d'ensemble de votre situation actuelle.</p>
+          <div class="card__footer">
+            <span class="card__duration"><i class="ph ph-clock"></i> 30 min</span>
+            <span class="card__price">45 €</span>
+          </div>
+        </div>
+
+        <!-- Tirage Approfondi (pre-selected) -->
+        <div class="card card--selectable card--selected" role="button" tabindex="0" aria-label="Sélectionner Tirage Approfondi">
+          <span class="card__check"><i class="ph ph-check"></i></span>
+          <span class="card__badge">Populaire</span>
+          <h3 class="card__title">Tirage Approfondi</h3>
+          <p class="card__description">Analyse détaillée avec compte-rendu écrit.</p>
+          <div class="card__footer">
+            <span class="card__duration"><i class="ph ph-clock"></i> 60 min</span>
+            <span class="card__price">75 €</span>
+          </div>
+        </div>
+
+        <!-- Tirage Écrit -->
+        <div class="card card--selectable" role="button" tabindex="0" aria-label="Sélectionner Tirage Écrit">
+          <span class="card__check"><i class="ph ph-check"></i></span>
+          <h3 class="card__title">Tirage Écrit</h3>
+          <p class="card__description">Analyse complète et détaillée par email.</p>
+          <div class="card__footer">
+            <span class="card__duration"><i class="ph ph-envelope"></i> 48h</span>
+            <span class="card__price">55 €</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Step 2: Disponibilités -->
+    <section class="section container reveal">
+      <h2 class="section__title">Disponibilités</h2>
+      <div class="section__divider"></div>
+
+      <div class="calendar-placeholder" id="cal-embed">
+        <!-- Cal.com embed will go here -->
+        <i class="ph ph-calendar-blank" style="font-size:2rem;display:block;margin-bottom:0.5rem;color:var(--color-gold)"></i>
+        <p>Le calendrier de réservation sera connecté via <strong>Cal.com</strong></p>
+        <p style="font-size: var(--text-xs); margin-top: var(--space-xs); color: rgba(255,248,231,0.4);">L'intégration Cal.com sera activée prochainement</p>
+      </div>
+
+      <div class="time-slots">
+        <button class="time-slot">09:00</button>
+        <button class="time-slot time-slot--selected">11:30</button>
+        <button class="time-slot">14:00</button>
+        <button class="time-slot">16:30</button>
+      </div>
+    </section>
+
+    <!-- Step 3: Résumé & Paiement -->
+    <section class="section container reveal">
+      <h2 class="section__title">Résumé &amp; Paiement</h2>
+      <div class="section__divider"></div>
+
+      <!-- Summary box -->
+      <div class="summary-box">
+        <div class="summary-box__row">
+          <span class="summary-box__label">Prestation</span>
+          <span class="summary-box__value">Tirage Approfondi</span>
+        </div>
+        <div class="summary-box__row">
+          <span class="summary-box__label">Date</span>
+          <span class="summary-box__value">—</span>
+        </div>
+        <div class="summary-box__row">
+          <span class="summary-box__label">Total</span>
+          <span class="summary-box__value summary-box__value--gold">75 €</span>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <form>
+        <div class="form-group">
+          <label for="fullname" class="form-label">Nom complet</label>
+          <input type="text" id="fullname" class="form-input" placeholder="Votre nom et prénom" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" id="email" class="form-input" placeholder="votre@email.fr" required>
+        </div>
+
+        <div class="form-group">
+          <label for="question" class="form-label">Votre question pour le tirage</label>
+          <textarea id="question" class="form-textarea" placeholder="Décrivez votre situation ou votre question..."></textarea>
+        </div>
+
+        <div class="payment-buttons">
+          <button type="button" class="btn btn--paypal btn--full">
+            <i class="ph ph-paypal-logo"></i> PayPal
+          </button>
+          <button type="button" class="btn btn--card btn--full">
+            <i class="ph ph-credit-card"></i> Carte Bancaire
+          </button>
+        </div>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <a href="index.html" class="footer__logo">
+        <i class="ph ph-star-four footer__logo-icon"></i>
+        <span class="footer__logo-text">Les Arcanes de Mélanie</span>
+      </a>
+
+      <div class="footer__links">
+        <a href="mentions-legales.html" class="footer__link">Mentions Légales</a>
+        <a href="cgv.html" class="footer__link">CGV</a>
+        <a href="politique-confidentialite.html" class="footer__link">Politique de Confidentialité</a>
+        <a href="#" class="footer__link" onclick="CookieConsent.showPreferences(); return false;">Paramètres cookies</a>
+      </div>
+
+      <div class="footer__socials">
+        <a href="#" class="footer__social-link" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+        <a href="#" class="footer__social-link" aria-label="Facebook"><i class="ph ph-facebook-logo"></i></a>
+        <a href="mailto:contact@lesarcanesdemelanie.fr" class="footer__social-link" aria-label="Email"><i class="ph ph-envelope"></i></a>
+      </div>
+    </div>
+    <p class="footer__copyright">&copy; 2026 Les Arcanes de Mélanie. Tous droits réservés.</p>
+  </footer>
+
+  <!-- Bottom Nav -->
+  <nav class="bottom-nav" aria-label="Navigation mobile">
+    <a href="index.html" class="bottom-nav__link"><i class="ph ph-house"></i><span>Accueil</span></a>
+    <a href="prestations.html" class="bottom-nav__link"><i class="ph ph-cards-three"></i><span>Tirages</span></a>
+    <a href="reservation.html" class="bottom-nav__link bottom-nav__link--active"><i class="ph ph-calendar-fill"></i><span>Rendez-vous</span></a>
+    <a href="contact.html" class="bottom-nav__link"><i class="ph ph-chat-circle"></i><span>Contact</span></a>
+  </nav>
+
+  <!-- JS -->
+  <script src="js/main.js"></script>
+  <script src="js/rgpd.js"></script>
+</body>
+</html>

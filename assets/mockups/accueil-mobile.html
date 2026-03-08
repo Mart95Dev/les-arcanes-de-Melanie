@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&amp;family=Cormorant+Garamond:wght@400;500;600&amp;family=Montserrat:wght@400;600;700&amp;family=Manrope:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#d39e17",
+                        "mystic-blue": "#1A1A2E",
+                        "mystic-purple": "#6C3483",
+                        "cream": "#FFF8E7",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#1A1A2E",
+                    },
+                    fontFamily: {
+                        "display": ["Playfair Display", "serif"],
+                        "body": ["Cormorant Garamond", "serif"],
+                        "ui": ["Montserrat", "sans-serif"],
+                        "sans": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(108, 52, 131, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(211, 158, 23, 0.3);
+        }
+        .text-gold { color: #d39e17; }
+        .bg-gold { background-color: #d39e17; }
+        .border-gold { border-color: rgba(211, 158, 23, 0.5); }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-dark text-cream font-body selection:bg-primary/30">
+<!-- Header -->
+<header class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4 bg-transparent backdrop-blur-md border-b border-primary/10">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl">auto_awesome</span>
+<h1 class="font-display text-xl font-bold tracking-widest uppercase text-primary">Tarot Destiny</h1>
+</div>
+<button class="text-primary p-2">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</header>
+<main class="pt-20 pb-24 overflow-x-hidden">
+<!-- Hero Section -->
+<section class="relative px-6 py-12 flex flex-col items-center text-center gap-8">
+<div class="absolute inset-0 bg-gradient-to-b from-mystic-purple/20 to-transparent pointer-events-none"></div>
+<div class="relative w-full max-w-[280px] aspect-[2/3] rounded-xl overflow-hidden border-2 border-primary shadow-[0_0_30px_rgba(211,158,23,0.2)]">
+<img alt="Cartes de tarot mystiques sur une table en bois" class="w-full h-full object-cover" data-alt="Main tenant une carte de tarot mystique ornée" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBenSvjE9IJpwPfppNemB1cF-QJ_wKKRmWXcV_bp8gvxjiZ4n3wdsnJ5vFFEGKP9i1b6RbOOC9mJdPK4J6DCFZPMYvhpbt1K-MZyqSPrHk3fgL2wRhfZz8aE_fidCGyDQXRvj6ezLkyxGzWPQu1GUXErBARKwl6w-g3qhBz6FJB5oW7Tf_fGQHyIrub9FHtow8KdE2ARwuYvz7xDSHkGM_PsA2XKS5HaSbSnR9cU4Pm56AEfJBd3jR72yp7iEydFdoXbbX88KzsrN4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-mystic-blue via-transparent to-transparent"></div>
+</div>
+<div class="flex flex-col gap-4 z-10">
+<h2 class="font-display text-4xl font-bold text-primary leading-tight">
+                    Découvrez les secrets de votre destin
+                </h2>
+<p class="text-cream/80 text-lg leading-relaxed max-w-sm mx-auto">
+                    Plongez dans l'univers mystique du Tarot pour éclairer votre chemin de vie et révéler les vérités cachées.
+                </p>
+<div class="mt-4">
+<button class="font-ui bg-primary text-background-dark font-bold py-4 px-8 rounded-xl shadow-lg shadow-primary/20 active:scale-95 transition-transform w-full">
+                        COMMENCER MON TIRAGE
+                    </button>
+</div>
+</div>
+</section>
+<!-- Separator -->
+<div class="flex justify-center items-center gap-4 py-8 text-primary/50">
+<span>✩</span>
+<span>☽</span>
+<span>✩</span>
+</div>
+<!-- Prestations Section -->
+<section class="px-6 py-10 flex flex-col gap-8">
+<h3 class="font-display text-3xl text-center text-primary italic">Nos Lectures Sacrées</h3>
+<div class="flex flex-col gap-6">
+<!-- Card 1 -->
+<div class="glass-card rounded-xl overflow-hidden flex flex-col">
+<div class="h-40 w-full relative">
+<img alt="Trois cartes de tarot alignées" class="w-full h-full object-cover opacity-80" data-alt="Trois cartes de tarot alignées symbolisant le temps" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAr1QNL5xFHgVxaJRr4ck3QVQNaXD7QkEU-ajnN119bWsBO0cjiEqeQ0GBQqaS3NVq-UOybMuX_WkVEdUsLIWLE8dQug7QyAoobgUg2UznAmiFFMsbg2bBAXgGZohwfROqBOiPpQaYt42dWk1QAzTiUCNFjctJadOfPTNrnpucJrhLtPNwt9SDxvsb_4YrY3XuK9LkTPbe__8F7EoXBvaQoLbImlCX-QF9004IQe_hsEXwaU6bJnvjODdpmJCT36__aKMKzsbYZzWw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-mystic-purple/40 to-transparent"></div>
+</div>
+<div class="p-6 flex flex-col gap-3">
+<h4 class="font-display text-xl text-primary">Passé / Présent / Futur</h4>
+<p class="text-cream/70 text-sm italic font-medium">Une lecture complète de votre ligne temporelle pour comprendre les cycles de votre vie.</p>
+<div class="flex justify-between items-center mt-2">
+<span class="font-ui font-bold text-primary text-xl tracking-tighter">45€</span>
+<button class="font-ui text-xs font-bold border border-primary px-4 py-2 rounded-full text-primary uppercase tracking-widest">Réserver</button>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="glass-card rounded-xl overflow-hidden flex flex-col">
+<div class="h-40 w-full relative">
+<img alt="Rose rouge et jeu de tarot" class="w-full h-full object-cover opacity-80" data-alt="Une rose rouge mystique posée sur des cartes de tarot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtpG8-VsUwRSjE89hD-Vukx4Y7h6X3u5-VjSi6S7aH47hx4OSk0fVeVUpMC9LOb0QfOvOHRQyj-0m5cP_lkyHQ67b1znhyDOYw4WjiSIF4vlutoVIVto79qO5k_hwaxLE3cD7JFWh_ih7xTCfjX_uZioBzDSfyAiLmKU9OcI57HnusR3DOvZk7RaHoytknL2072CrqhFxt5X0ygdo96eNZsrwokQJulaYNEpTSL7Nyix2TlMRIbdqSLP_M8zJmjRrdHh_OmgwQn_M"/>
+<div class="absolute inset-0 bg-gradient-to-t from-mystic-purple/40 to-transparent"></div>
+</div>
+<div class="p-6 flex flex-col gap-3">
+<h4 class="font-display text-xl text-primary">Harmonie Relationnelle</h4>
+<p class="text-cream/70 text-sm italic font-medium">Explorez les liens qui vous unissent aux autres et découvrez les clés de l'équilibre.</p>
+<div class="flex justify-between items-center mt-2">
+<span class="font-ui font-bold text-primary text-xl tracking-tighter">55€</span>
+<button class="font-ui text-xs font-bold border border-primary px-4 py-2 rounded-full text-primary uppercase tracking-widest">Réserver</button>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="glass-card rounded-xl overflow-hidden flex flex-col">
+<div class="h-40 w-full relative">
+<img alt="Carte du ciel étoilé et tarot" class="w-full h-full object-cover opacity-80" data-alt="Carte céleste ancienne avec symboles astrologiques et cartes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_2_3fsquPxBZNt1b_UQY5Ka8ZlP2OZIX31LyuEj0MVQLoC5QyGOT6HvQP0h2VNnkCsQPFIeNi2BOordw9qnBy1hFX64XpoaVJCIRE58q42sVKkocpX-Rj6P1xTfH3yg4PtHxARLTFZIwqxvQ3wZnhxEcgluI3WQXQT1MAolJ11ZDOcmaLqgdskQybRlg_z8DPJCaHbyBRj6ct29ULavp-3ioMvCgagsmlcReBkg2N2wi8oRP4v32UeWlI1aM1IpQX15s48PYYQZs"/>
+<div class="absolute inset-0 bg-gradient-to-t from-mystic-purple/40 to-transparent"></div>
+</div>
+<div class="p-6 flex flex-col gap-3">
+<h4 class="font-display text-xl text-primary">Roue de l'Année</h4>
+<p class="text-cream/70 text-sm italic font-medium">Prévisions astrologiques et tarot pour les 12 prochains mois de votre existence.</p>
+<div class="flex justify-between items-center mt-2">
+<span class="font-ui font-bold text-primary text-xl tracking-tighter">80€</span>
+<button class="font-ui text-xs font-bold border border-primary px-4 py-2 rounded-full text-primary uppercase tracking-widest">Réserver</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="px-6 py-12 bg-mystic-purple/5">
+<h3 class="font-display text-3xl text-center text-primary italic mb-10">Paroles de Chercheurs</h3>
+<div class="space-y-6">
+<div class="glass-card p-6 rounded-xl relative">
+<span class="material-symbols-outlined absolute -top-4 left-6 text-4xl text-primary bg-background-dark px-2">format_quote</span>
+<p class="italic text-cream/90 mb-4 leading-relaxed">"Une lecture d'une justesse incroyable. Les cartes ont su mettre des mots sur des émotions que je n'arrivais pas à exprimer."</p>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full border border-primary overflow-hidden">
+<img alt="Avatar Elara" class="w-full h-full object-cover" data-alt="Portrait d'une femme souriante dans un style naturel" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhKmgawBoCSr61BS6xm4MgyXHwaqy9LPf1X7SMfWvCrkS4bTe1vAjiASKCMLW9-Sx7tCVivgjnAaquan5uvJV_zjCeAT9AP-3M_LEi0n5iJyXuz-xTHt41Xg0RFOo0McXVKlh1TQP6YXRj8Bgu7A9nTbNz20m7mPWFk011asZkQeTkJ0nrkbW0ldK0eGjmolzev-hJCfADBcZ2jIMXKPqppJD-GTg1uziyN7KR_NyWysFF8jFrfH9UaNU3kbyvet_dMWWtbP5FI7E"/>
+</div>
+<span class="font-ui text-xs font-bold text-primary uppercase tracking-widest">Élara M.</span>
+</div>
+</div>
+<div class="glass-card p-6 rounded-xl relative">
+<span class="material-symbols-outlined absolute -top-4 left-6 text-4xl text-primary bg-background-dark px-2">format_quote</span>
+<p class="italic text-cream/90 mb-4 leading-relaxed">"L'expérience est à la fois apaisante et révélatrice. On en ressort avec une vision beaucoup plus claire de son avenir."</p>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full border border-primary overflow-hidden">
+<img alt="Avatar Julian" class="w-full h-full object-cover" data-alt="Portrait d'un homme serein en noir et blanc" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdvIgzLgHqDPesZ5gTK-2LAHD9rhws1_8AkDnzLfyzceOVJ6XxfjmOVIqitvyJxgd-KKmKtPw9M8vkxGIYSjAFlLS43ltW5Mos341NHF1bQqyYYOIXolcm5OGbYDzu4EOdmfhibUM3LuBmcQGtGADt7U-3NaP4rCTZvHM7j927vs8nR3f6xTSqYbH-nRGW1frnFCwzweRXUYs3kYjvChoCVavBSIVEgXNFfcTUmeXunKypxwm2OuQKut4lghAHxtchInlxzd3AGgc"/>
+</div>
+<span class="font-ui text-xs font-bold text-primary uppercase tracking-widest">Julian R.</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter -->
+<section class="px-6 py-16 text-center">
+<div class="glass-card p-8 rounded-xl border-dashed border-primary/40">
+<span class="material-symbols-outlined text-primary text-4xl mb-4">star_half</span>
+<h3 class="font-display text-2xl text-primary mb-2">Restez connectés aux astres</h3>
+<p class="text-cream/70 mb-6 text-sm italic">Recevez chaque mois vos prédictions lunaires et nos conseils mystiques.</p>
+<form class="flex flex-col gap-3">
+<input class="bg-background-dark/50 border border-primary/30 rounded-lg px-4 py-3 text-cream placeholder:text-cream/30 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all font-ui text-sm" placeholder="Votre adresse mail sacrée" type="email"/>
+<button class="bg-primary text-background-dark font-ui font-bold py-3 rounded-lg uppercase tracking-widest text-sm">S'abonner</button>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-mystic-blue border-t border-primary/20 px-6 pt-12 pb-28 text-center">
+<div class="flex flex-col gap-8">
+<div class="flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-primary text-2xl">auto_awesome</span>
+<h2 class="font-display text-lg font-bold tracking-widest uppercase text-primary">Tarot Destiny</h2>
+</div>
+<nav class="flex flex-wrap justify-center gap-x-8 gap-y-4 font-ui text-xs font-bold uppercase tracking-widest text-cream/60">
+<a class="hover:text-primary transition-colors" href="#">Lectures</a>
+<a class="hover:text-primary transition-colors" href="#">Boutique</a>
+<a class="hover:text-primary transition-colors" href="#">Blog</a>
+<a class="hover:text-primary transition-colors" href="#">Contact</a>
+</nav>
+<div class="flex justify-center gap-6">
+<a class="text-primary/70 hover:text-primary" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="text-primary/70 hover:text-primary" href="#"><span class="material-symbols-outlined">camera</span></a>
+<a class="text-primary/70 hover:text-primary" href="#"><span class="material-symbols-outlined">mail</span></a>
+</div>
+<div class="flex justify-center items-center gap-2 text-primary/30 py-4">
+<span>☆</span>
+</div>
+<p class="text-cream/40 text-[10px] font-ui uppercase tracking-[0.2em]">
+                © 2024 Tarot Destiny. Tous droits réservés aux étoiles.
+            </p>
+</div>
+</footer>
+<!-- Bottom Navigation Bar (Fixed) -->
+<nav class="fixed bottom-0 left-0 right-0 bg-mystic-blue/90 backdrop-blur-lg border-t border-primary/20 px-6 py-4 flex justify-between items-center z-50">
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined fill-1">home</span>
+<span class="font-ui text-[10px] font-bold uppercase tracking-wider">Accueil</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary/50" href="#">
+<span class="material-symbols-outlined">style</span>
+<span class="font-ui text-[10px] font-bold uppercase tracking-wider">Tirages</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary/50" href="#">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="font-ui text-[10px] font-bold uppercase tracking-wider">Boutique</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary/50" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-ui text-[10px] font-bold uppercase tracking-wider">Profil</span>
+</a>
+</nav>
+</body></html>

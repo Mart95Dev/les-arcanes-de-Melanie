@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#d39e17",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#211d11",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+        .mystic-gradient {
+            background: linear-gradient(135deg, rgba(211, 158, 23, 0.1) 0%, rgba(33, 29, 17, 0) 100%);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased">
+<!-- Header / Navigation -->
+<header class="sticky top-0 z-50 w-full border-b border-primary/20 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
+<div class="max-w-[1440px] mx-auto px-10 py-4 flex items-center justify-between">
+<div class="flex items-center gap-3 text-primary">
+<span class="material-symbols-outlined text-3xl">auto_awesome</span>
+<h2 class="text-xl font-extrabold tracking-tight uppercase">L'Arcane Sacrée</h2>
+</div>
+<nav class="hidden md:flex items-center gap-10">
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Accueil</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#services">Lectures Tarot</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#about">À Propos</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#testimonials">Témoignages</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#contact">Contact</a>
+</nav>
+<button class="bg-primary hover:bg-primary/90 text-background-dark px-6 py-2.5 rounded-full font-bold text-sm transition-all shadow-lg shadow-primary/20">
+                Réserver une séance
+            </button>
+</div>
+</header>
+<main class="max-w-[1440px] mx-auto px-10">
+<!-- Hero Section -->
+<section class="py-16 @container">
+<div class="flex flex-col @[864px]:flex-row gap-12 items-center">
+<div class="flex-1 flex flex-col gap-8">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 w-fit">
+<span class="material-symbols-outlined text-primary text-sm">stars</span>
+<span class="text-xs font-bold uppercase tracking-widest text-primary">Guidance Spirituelle Intuitive</span>
+</div>
+<h1 class="text-5xl @[1024px]:text-7xl font-black leading-[1.1] tracking-tight text-slate-900 dark:text-slate-100">
+                        Découvrez les secrets de <span class="text-primary italic font-serif">votre destin</span>
+</h1>
+<p class="text-lg text-slate-600 dark:text-slate-400 max-w-xl leading-relaxed">
+                        Plongez dans la sagesse millénaire du Tarot. À travers des tirages personnalisés, trouvez la clarté nécessaire pour naviguer dans votre vie amoureuse, professionnelle et spirituelle.
+                    </p>
+<div class="flex gap-4">
+<button class="bg-primary text-background-dark px-8 py-4 rounded-xl font-bold text-lg hover:scale-105 transition-transform">
+                            Commencer mon tirage
+                        </button>
+<button class="border border-primary/30 text-primary px-8 py-4 rounded-xl font-bold text-lg hover:bg-primary/5 transition-colors">
+                            En savoir plus
+                        </button>
+</div>
+</div>
+<div class="flex-1 w-full relative">
+<div class="absolute inset-0 bg-primary/10 blur-3xl rounded-full -z-10 animate-pulse"></div>
+<div class="w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl border border-primary/20 bg-cover bg-center" data-alt="Main tenant des cartes de tarot mystiques avec bougies" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCHGOvqQKvQs9nxLSQFT1YtdMKvRvGF27AdhLlvDMgtmcNF3jBrn9bRrQAa6awwrXkn03ZC9vL8yh3EBl3kvw6Xur_vfkx5ig7EtnQFwuFJZLTuJVa1YfGl3lBAHVrYIaypt-Sx5PPki6tEx7X0cd2-YOt2vB6-KRrkEyUOlAaEsS9v-PpiMtUMcynlvGH9z3Kr-QqHtiDpXmX5fj2kcIPBIordQnW7HhDqRvTA_SF2z0zKnrCDH9_ejJ_aEKsi0gC8uD6Sy55tyE0');">
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-20 border-t border-primary/10" id="services">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-bold mb-4">Nos Services Sacrés</h2>
+<div class="w-24 h-1 bg-primary mx-auto rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Service 1 -->
+<div class="group bg-background-light dark:bg-slate-900/40 p-6 rounded-2xl border border-primary/10 hover:border-primary/40 transition-all hover:shadow-xl hover:shadow-primary/5">
+<div class="aspect-[3/4] rounded-xl overflow-hidden mb-6">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-110 transition-transform duration-500" data-alt="Tirage de trois cartes tarot sur table bois" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCJxi8-0OVFmzn4NAOJBsIugHsQ99hLoxQPdMIM60jaGVCJ6ID6tC55UFEHex3zZCxUzJS2qhcsV92Bq69B0ps9EmCZpEOQP6tqByOq1ExlQqAv1kcSs-VTwE3BmGBJVKM7CeJ6PsLpQYhQSwnGJ8-GffYGWPuj8-YyxURgQ3f2tHz2mDGk5ELNrNwe9ePv1-9o666nWaNURzf7ZWU3eTvYeb9ffz30aE0EpsRmr32qBNqD2NO3LQoJyPeq3hDNF785Z_wdUpDGOI0');"></div>
+</div>
+<h3 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Passé, Présent, Futur</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-4">Un tirage classique à 3 cartes pour obtenir une clarté immédiate sur votre situation actuelle et son évolution.</p>
+<div class="flex items-center gap-2 text-primary font-bold">
+<span>45,00 €</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</div>
+</div>
+<!-- Service 2 -->
+<div class="group bg-background-light dark:bg-slate-900/40 p-6 rounded-2xl border border-primary/10 hover:border-primary/40 transition-all hover:shadow-xl hover:shadow-primary/5">
+<div class="aspect-[3/4] rounded-xl overflow-hidden mb-6">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-110 transition-transform duration-500" data-alt="Cartes de tarot et quartz rose pour l'amour" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA-9kYZHnktvRGZSAckln6CWfMtgD8OVF_fmjDJUDU7na5C1FLl15Om-V03F_svugnL6ugrDo_eUhxfQc9x3lgJ-drukqIRgkFvK8i6yzs_eMv9FItbYt7Fh_9CrNm8rnSa3auPZPQDfyScDXbtrnuMbNoIuT2u_0tFInneOzU7julDWVaqnV3C4b0UqJKbRFI-4Aw6AluyWAPaZChVG5_m_bx3-GVD3APtYAsTL0uWX_kV09q925b2oj2hFpWdkVGcRY8qWJHTVLs');"></div>
+</div>
+<h3 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Harmonie Relationnelle</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-4">Comprendre les liens spirituels entre les âmes et identifier les obstacles au bonheur partagé.</p>
+<div class="flex items-center gap-2 text-primary font-bold">
+<span>65,00 €</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</div>
+</div>
+<!-- Service 3 -->
+<div class="group bg-background-light dark:bg-slate-900/40 p-6 rounded-2xl border border-primary/10 hover:border-primary/40 transition-all hover:shadow-xl hover:shadow-primary/5">
+<div class="aspect-[3/4] rounded-xl overflow-hidden mb-6">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-110 transition-transform duration-500" data-alt="Roue du zodiaque et cartes tarot annuelles" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDC-M60L1IRUIhdhNr2Lv4JP1f6bMIsFSSFOsP2DOUQjExWw7Pt87901XnY9v5wSSoDkufG29R8O3Wf7NDBb1u9FAfVt6Qx11AqejBYuE3Z_14BpA0wWjfFpLF9UmiP7zDZ1N3tEZiMs4O9touLNXG0r48hQgb8ufSLBJZ0IVUQ4x8k737ZEz05lLIUKFKl4JV353lzCHyVKCVdd-wc_XJI1ezqWpxWuQH4arVJ6i2CniCHJsxA4Fr806fs3a9dIYP63o_PktsaXTc');"></div>
+</div>
+<h3 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Roue de l'Année</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-4">Un guide complet mois par mois pour vos 12 prochains cycles lunaires. Anticipez les opportunités.</p>
+<div class="flex items-center gap-2 text-primary font-bold">
+<span>120,00 €</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-20 bg-primary/5 rounded-[3rem] px-10 my-10" id="testimonials">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-bold mb-4">Paroles de Chercheurs</h2>
+<p class="text-slate-600 dark:text-slate-400 italic">Ceux qui ont trouvé la lumière sur leur chemin</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Testimonial 1 -->
+<div class="bg-background-light dark:bg-background-dark p-8 rounded-2xl border border-primary/10 relative">
+<span class="material-symbols-outlined text-primary/20 text-6xl absolute top-4 right-4">format_quote</span>
+<div class="flex gap-1 text-primary mb-4">
+<span class="material-symbols-outlined text-sm fill-[1]">star</span>
+<span class="material-symbols-outlined text-sm fill-[1]">star</span>
+<span class="material-symbols-outlined text-sm fill-[1]">star</span>
+<span class="material-symbols-outlined text-sm fill-[1]">star</span>
+<span class="material-symbols-outlined text-sm fill-[1]">star</span>
+</div>
+<p class="text-slate-600 dark:text-slate-400 mb-6 italic">"Une lecture d'une justesse incroyable. Les cartes ont révélé des aspects de ma vie que je n'osais pas m'avouer. Une véritable révélation."</p>
+<div class="flex items-center gap-4">
+<div class="size-12 rounded-full bg-cover bg-center" data-alt="Portrait de femme souriante" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA9th7JKkVqM6Msa0Myh2a3g2Z6fb6Ta47N2e9Wy2Nq-QIJy0XBa5iTywtbA4ChuOk4SA8eCMvS0koxgXlgvfu7OSTBP0AGrfBe6YhcH_ZyWBOFw-GNI7KRjmSRnGQPP1ElkyhayaqDEZfjyLQ-M0pJTFwUmwZy-mpeQBPQQjlPJc73c31YOpArqHRIu5myS7OykhR2njICrSp8C7rS5TeOMfXQhGZYLDMB9g-2y-koMjrRVprX_b9bJUaTjhjUUqQ94GcGIsmXiJU');"></div>
+<div>
+<h4 class="font-bold text-sm">Sophie M.</h4>
+<p class="text-xs text-primary">Consultante SEO</p>
+</div>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="bg-background-light dark:bg-background-dark p-8 rounded-2xl border border-primary/10 relative">
+<span class="material-symbols-outlined text-primary/20 text-6xl absolute top-4 right-4">format_quote</span>
+<div class="flex gap-1 text-primary mb-4">
+<span class="material-symbols-outlined text-sm fill-[1]">star</span>
+<span class="material-symbols-outlined text-sm fill-[1]">star</span>
+<span class="material-symbols-outlined text-sm fill-[1]">star</span>
+<span class="material-symbols-outlined text-sm fill-[1]">star</span>
+<span class="material-symbols-outlined text-sm fill-[1]">star</span>
+</div>
+<p class="text-slate-600 dark:text-slate-400 mb-6 italic">"J'étais sceptique, mais l'approche bienveillante et les conseils concrets m'ont aidé à traverser une période de doute professionnel."</p>
+<div class="flex items-center gap-4">
+<div class="size-12 rounded-full bg-cover bg-center" data-alt="Portrait d'homme élégant" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBFWVdDJyLUSZ2cE6DWHD-ayLnW-cqVxygSZiP0BrMXMJE6DHaqR8gpvmTUnlLxed13yzKu3WvduGYp4mmThxJNWRFsQWkMbH1sMrdP0GVIISidBdqkKrtr3d7fO-K_M9Kd2ywGvA8Regv0LFdUWrMX8UVqug_KT-wDwtmkzWmun5FmfseBQhmNBASxXvX-1JaIC9MDvwRrk3lUeZCxAo8FyKL7CHFYo4AtnpqB0UPW6M_u7F92brD53jOt0WL6DJDgF7Mp7_5spDc');"></div>
+<div>
+<h4 class="font-bold text-sm">Marc L.</h4>
+<p class="text-xs text-primary">Architecte</p>
+</div>
+</div>
+</div>
+<!-- Testimonial 3 -->
+<div class="bg-background-light dark:bg-background-dark p-8 rounded-2xl border border-primary/10 relative">
+<span class="material-symbols-outlined text-primary/20 text-6xl absolute top-4 right-4">format_quote</span>
+<div class="flex gap-1 text-primary mb-4">
+<span class="material-symbols-outlined text-sm fill-[1]">star</span>
+<span class="material-symbols-outlined text-sm fill-[1]">star</span>
+<span class="material-symbols-outlined text-sm fill-[1]">star</span>
+<span class="material-symbols-outlined text-sm fill-[1]">star</span>
+<span class="material-symbols-outlined text-sm fill-[1]">star</span>
+</div>
+<p class="text-slate-600 dark:text-slate-400 mb-6 italic">"Le tirage relationnel a sauvé mon couple. Nous avons pu mettre des mots sur nos non-dits grâce aux symboles des arcanes."</p>
+<div class="flex items-center gap-4">
+<div class="size-12 rounded-full bg-cover bg-center" data-alt="Portrait de femme sereine" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuABvK1VwLQEXdYwmmX-fpypqZktbLtp9UCRswIU0u_9673cnY-rMfvJ4BkUq_jDeKAKvYigWsXHg18-0_NIzRXEp-87qbEcAfmtXSamWaL3ujNbmhENgQkC36CliBs5NQJ4X8nMwwE40Dic7SLjw9vjPsYeJeUcvxZc7tAkJFHUXKLJP5feoEJZSOhJKJhZ2y0MQjqHnJeo3X1lYyPA_VmJOhZ4BbiZv8vuQbiqfQiNSu6aXvB1jpPVxAaR2kwUZf5AQIqPz31SS-E');"></div>
+<div>
+<h4 class="font-bold text-sm">Julie D.</h4>
+<p class="text-xs text-primary">Artiste Peintre</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter / CTA -->
+<section class="py-20 mb-20 text-center">
+<div class="max-w-2xl mx-auto flex flex-col items-center gap-8">
+<span class="material-symbols-outlined text-5xl text-primary animate-bounce">auto_fix_high</span>
+<h2 class="text-4xl font-black">Restez connectés aux astres</h2>
+<p class="text-slate-600 dark:text-slate-400">Inscrivez-vous à notre gazette mensuelle pour recevoir vos prévisions gratuites et des rituels lunaires exclusifs.</p>
+<form class="w-full flex gap-3 p-2 bg-slate-900/40 rounded-2xl border border-primary/10">
+<input class="flex-1 bg-transparent border-none focus:ring-0 text-white px-4" placeholder="Votre adresse email" type="email"/>
+<button class="bg-primary text-background-dark px-6 py-3 rounded-xl font-bold hover:scale-105 transition-transform">S'abonner</button>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-900/80 border-t border-primary/10 py-12">
+<div class="max-w-[1440px] mx-auto px-10 flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex items-center gap-3 text-primary">
+<span class="material-symbols-outlined text-2xl">auto_awesome</span>
+<span class="text-lg font-bold tracking-tight uppercase">L'Arcane Sacrée</span>
+</div>
+<div class="flex gap-8 text-sm text-slate-400">
+<a class="hover:text-primary" href="#">Mentions Légales</a>
+<a class="hover:text-primary" href="#">CGV</a>
+<a class="hover:text-primary" href="#">Politique de Confidentialité</a>
+</div>
+<div class="flex gap-4">
+<a class="size-10 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center text-primary hover:bg-primary hover:text-background-dark transition-all" href="#">
+<span class="material-symbols-outlined text-sm">public</span>
+</a>
+<a class="size-10 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center text-primary hover:bg-primary hover:text-background-dark transition-all" href="#">
+<span class="material-symbols-outlined text-sm">mail</span>
+</a>
+</div>
+</div>
+<div class="text-center mt-10 text-xs text-slate-500">
+            © 2024 L'Arcane Sacrée Tarot. Tous droits réservés.
+        </div>
+</footer>
+</body></html>

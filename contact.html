@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Les Arcanes de Mélanie</title>
+  <meta name="description" content="Contactez Mélanie pour une guidance personnalisée par tarot. Réservez votre séance en visio ou par email. Réponse rapide et bienveillante.">
+
+  <!-- Preconnect Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Phosphor Icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/rgpd.css">
+</head>
+<body>
+
+  <!-- Skip link -->
+  <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header__inner">
+      <a href="index.html" class="header__logo">
+        <i class="ph ph-star-four header__logo-icon"></i>
+        <span class="header__logo-text">Les Arcanes de Mélanie</span>
+      </a>
+
+      <nav class="nav">
+        <a href="index.html" class="nav__link">Accueil</a>
+        <a href="prestations.html" class="nav__link">Prestations</a>
+        <a href="mon-histoire.html" class="nav__link">Mon Histoire</a>
+        <a href="reservation.html" class="nav__link">Réservation</a>
+        <a href="contact.html" class="nav__link nav__link--active">Contact</a>
+      </nav>
+
+      <a href="reservation.html" class="btn btn--primary btn--small btn--rounded header__cta">Réserver</a>
+
+      <button class="hamburger" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu">
+    <a href="index.html" class="mobile-menu__link">Accueil</a>
+    <a href="prestations.html" class="mobile-menu__link">Prestations</a>
+    <a href="mon-histoire.html" class="mobile-menu__link">Mon Histoire</a>
+    <a href="reservation.html" class="mobile-menu__link">Réservation</a>
+    <a href="contact.html" class="mobile-menu__link">Contact</a>
+    <div class="mobile-menu__socials">
+      <a href="#" class="mobile-menu__social-link" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+      <a href="#" class="mobile-menu__social-link" aria-label="Facebook"><i class="ph ph-facebook-logo"></i></a>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main id="main-content">
+
+    <!-- Hero Mini -->
+    <section class="hero-mini container reveal">
+      <h1 style="color: var(--color-gold); font-size: 2.5rem; font-weight: 700;">Entrer en Contact</h1>
+      <p class="hero-mini__subtitle">Les astres sont alignés pour notre conversation. Contactez-moi pour une lecture ou une guidance personnalisée.</p>
+    </section>
+
+    <!-- Contact Info -->
+    <section class="section container reveal">
+      <div class="contact-info">
+        <div class="contact-info__block">
+          <div class="contact-info__icon"><i class="ph ph-phone-call"></i></div>
+          <div>
+            <p class="contact-info__label">Appeler pour une séance</p>
+            <p class="contact-info__value">06 XX XX XX XX</p>
+          </div>
+        </div>
+        <div class="contact-info__block">
+          <div class="contact-info__icon"><i class="ph ph-envelope"></i></div>
+          <div>
+            <p class="contact-info__label">Envoyer un email</p>
+            <p class="contact-info__value">contact@lesarcanesdemelanie.fr</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="section container reveal">
+      <div class="contact-form">
+        <h3 class="contact-form__title">
+          <i class="ph ph-magic-wand"></i> Envoyer un Message
+        </h3>
+        <form>
+          <div class="form-group">
+            <input type="text" class="form-input" placeholder="Votre nom" required>
+          </div>
+          <div class="form-group">
+            <input type="email" class="form-input" placeholder="Votre adresse email" required>
+          </div>
+          <div class="form-group">
+            <textarea class="form-textarea" placeholder="Comment puis-je vous guider aujourd'hui ?" rows="3"></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full btn--large">Demander une guidance</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Sacred Hours -->
+    <section class="section container reveal">
+      <div class="schedule-section">
+        <h3 class="schedule-section__title">Heures Sacrées</h3>
+        <div class="schedule-table-wrapper">
+          <table class="schedule-table">
+            <tbody>
+              <tr>
+                <td>Lundi — Vendredi</td>
+                <td style="text-align:right; font-weight:700; color: var(--color-text-primary);">10h00 — 20h00</td>
+              </tr>
+              <tr>
+                <td>Samedi</td>
+                <td style="text-align:right; font-weight:700; color: var(--color-text-primary);">11h00 — 18h00</td>
+              </tr>
+              <tr>
+                <td>Dimanche</td>
+                <td style="text-align:right; font-weight:700; color: var(--color-gold); font-style: italic;">Lectures lunaires uniquement</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <a href="index.html" class="footer__logo">
+        <i class="ph ph-star-four footer__logo-icon"></i>
+        <span class="footer__logo-text">Les Arcanes de Mélanie</span>
+      </a>
+
+      <div class="footer__links">
+        <a href="mentions-legales.html" class="footer__link">Mentions Légales</a>
+        <a href="cgv.html" class="footer__link">CGV</a>
+        <a href="politique-confidentialite.html" class="footer__link">Politique de Confidentialité</a>
+        <a href="#" class="footer__link" onclick="CookieConsent.showPreferences(); return false;">Paramètres cookies</a>
+      </div>
+
+      <div class="footer__socials">
+        <a href="#" class="footer__social-link" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+        <a href="#" class="footer__social-link" aria-label="Facebook"><i class="ph ph-facebook-logo"></i></a>
+        <a href="mailto:contact@lesarcanesdemelanie.fr" class="footer__social-link" aria-label="Email"><i class="ph ph-envelope"></i></a>
+      </div>
+    </div>
+    <p class="footer__copyright">&copy; 2026 Les Arcanes de Mélanie. Tous droits réservés.</p>
+  </footer>
+
+  <!-- Bottom Nav -->
+  <nav class="bottom-nav" aria-label="Navigation mobile">
+    <a href="index.html" class="bottom-nav__link"><i class="ph ph-house"></i><span>Accueil</span></a>
+    <a href="prestations.html" class="bottom-nav__link"><i class="ph ph-cards-three"></i><span>Tirages</span></a>
+    <a href="contact.html" class="bottom-nav__link bottom-nav__link--active"><i class="ph ph-envelope-fill"></i><span>Contact</span></a>
+    <a href="mon-histoire.html" class="bottom-nav__link"><i class="ph ph-scroll"></i><span>Histoire</span></a>
+  </nav>
+
+  <!-- JS -->
+  <script src="js/main.js"></script>
+  <script src="js/rgpd.js"></script>
+</body>
+</html>
