@@ -19,6 +19,39 @@
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/dashboard.css">
+
+  <!-- Auth -->
+  <script src="js/auth.js"></script>
+  <script>Auth.requireAuth();</script>
+
+  <style>
+    .topbar__logout {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: none;
+      border: 1px solid rgba(255, 248, 231, 0.15);
+      color: var(--color-text-secondary);
+      font-family: var(--font-ui);
+      font-size: var(--text-small);
+      padding: 6px 12px;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      transition: var(--transition-fast);
+    }
+    .topbar__logout:hover {
+      color: var(--color-danger);
+      border-color: var(--color-danger);
+    }
+    .topbar__logout-text {
+      display: none;
+    }
+    @media (min-width: 768px) {
+      .topbar__logout-text {
+        display: inline;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -81,6 +114,10 @@
         </button>
         <span class="topbar__title" id="topbarTitle">Tableau de bord</span>
         <div class="topbar__user">
+          <button class="topbar__logout" onclick="Auth.logout()" title="Déconnexion">
+            <i class="ph ph-sign-out"></i>
+            <span class="topbar__logout-text">Déconnexion</span>
+          </button>
           <span class="topbar__avatar">M</span>
         </div>
       </div>
