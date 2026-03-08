@@ -65,6 +65,7 @@
   border: 2px solid var(--color-gold);
   overflow: hidden;
   box-shadow: var(--shadow-gold);
+  flex-shrink: 0;
 }
 
 .hero__image img {
@@ -74,10 +75,32 @@
 }
 
 @media (min-width: 768px) {
-  .hero__buttons {
+  .hero {
+    text-align: left;
+  }
+
+  .hero__content {
+    flex-direction: row-reverse;
+    align-items: center;
+    max-width: var(--max-width);
+    gap: var(--space-lg);
+  }
+
+  .hero__buttons,
+  .hero__actions {
     flex-direction: row;
     max-width: none;
     width: auto;
+  }
+
+  .hero__image {
+    max-width: 320px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero__image {
+    max-width: 380px;
   }
 }
 
