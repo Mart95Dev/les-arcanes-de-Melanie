@@ -1,0 +1,14 @@
+# Identifiants
+.credentials
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Divers
+*.log
+node_modules/
