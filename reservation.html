@@ -81,7 +81,7 @@
       <div class="stepper">
         <div class="stepper__step">
           <div class="stepper__circle stepper__circle--active">1</div>
-          <span class="stepper__label stepper__label--active">Tirage</span>
+          <span class="stepper__label stepper__label--active">Prestation</span>
         </div>
         <div class="stepper__step">
           <div class="stepper__circle stepper__circle--inactive">2</div>
@@ -89,6 +89,10 @@
         </div>
         <div class="stepper__step">
           <div class="stepper__circle stepper__circle--inactive">3</div>
+          <span class="stepper__label stepper__label--inactive">Infos</span>
+        </div>
+        <div class="stepper__step">
+          <div class="stepper__circle stepper__circle--inactive">4</div>
           <span class="stepper__label stepper__label--inactive">Paiement</span>
         </div>
       </div>
@@ -169,9 +173,32 @@
       </div>
     </section>
 
-    <!-- Step 3: Résumé & Paiement -->
+    <!-- Step 3: Informations -->
     <section class="section container reveal">
-      <h2 class="section__title">Résumé &amp; Paiement</h2>
+      <h2 class="section__title">Vos informations</h2>
+      <div class="section__divider"></div>
+
+      <form>
+        <div class="form-group">
+          <label for="fullname" class="form-label">Nom complet</label>
+          <input type="text" id="fullname" class="form-input" placeholder="Votre nom et prénom" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" id="email" class="form-input" placeholder="votre@email.fr" required>
+        </div>
+
+        <div class="form-group">
+          <label for="question" class="form-label">Votre question pour le tirage</label>
+          <textarea id="question" class="form-textarea" placeholder="Décrivez votre situation ou votre question..."></textarea>
+        </div>
+      </form>
+    </section>
+
+    <!-- Step 4: Paiement -->
+    <section class="section container reveal">
+      <h2 class="section__title">Récapitulatif &amp; Paiement</h2>
       <div class="section__divider"></div>
 
       <!-- Summary box -->
@@ -190,32 +217,29 @@
         </div>
       </div>
 
-      <!-- Form -->
-      <form>
-        <div class="form-group">
-          <label for="fullname" class="form-label">Nom complet</label>
-          <input type="text" id="fullname" class="form-input" placeholder="Votre nom et prénom" required>
-        </div>
+      <!-- Cancellation notice -->
+      <div class="cancellation-notice">
+        <i class="ph ph-warning-circle"></i>
+        <p>Politique d'annulation : Remboursement intégral si annulation &gt;48h avant la séance. 50% entre 24h et 48h. Aucun remboursement en deçà de 24h. <a href="politique-annulation.html">En savoir plus</a></p>
+      </div>
 
-        <div class="form-group">
-          <label for="email" class="form-label">Email</label>
-          <input type="email" id="email" class="form-input" placeholder="votre@email.fr" required>
-        </div>
+      <!-- CGV checkbox -->
+      <div class="cgv-checkbox">
+        <label>
+          <input type="checkbox" required>
+          J'ai lu et j'accepte les <a href="cgv.html">CGV</a>. Pour les séances à date déterminée, je reconnais que le droit de rétractation de 14 jours ne s'applique pas (art. L221-28 12° du Code de la consommation).
+        </label>
+      </div>
 
-        <div class="form-group">
-          <label for="question" class="form-label">Votre question pour le tirage</label>
-          <textarea id="question" class="form-textarea" placeholder="Décrivez votre situation ou votre question..."></textarea>
-        </div>
-
-        <div class="payment-buttons">
-          <button type="button" class="btn btn--paypal btn--full">
-            <i class="ph ph-paypal-logo"></i> PayPal
-          </button>
-          <button type="button" class="btn btn--card btn--full">
-            <i class="ph ph-credit-card"></i> Carte Bancaire
-          </button>
-        </div>
-      </form>
+      <!-- Payment buttons -->
+      <div class="payment-buttons">
+        <button type="button" class="btn btn--paypal btn--full">
+          <i class="ph ph-paypal-logo"></i> PayPal
+        </button>
+        <button type="button" class="btn btn--card btn--full">
+          <i class="ph ph-credit-card"></i> Carte Bancaire
+        </button>
+      </div>
     </section>
 
   </main>
@@ -232,6 +256,7 @@
         <a href="mentions-legales.html" class="footer__link">Mentions Légales</a>
         <a href="cgv.html" class="footer__link">CGV</a>
         <a href="politique-confidentialite.html" class="footer__link">Politique de Confidentialité</a>
+        <a href="politique-annulation.html" class="footer__link">Politique d'Annulation</a>
         <a href="#" class="footer__link" onclick="CookieConsent.showPreferences(); return false;">Paramètres cookies</a>
       </div>
 

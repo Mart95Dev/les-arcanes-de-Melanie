@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Administration — Les Arcanes de Mélanie</title>
+  <meta name="robots" content="noindex, nofollow">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Montserrat:wght@400;500;600;700&display=swap">
+
+  <!-- Phosphor Icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+
+  <div class="dashboard">
+
+    <!-- Sidebar Overlay (mobile) -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar__header">
+        <a href="index.html" class="sidebar__logo">
+          <i class="ph ph-star-four"></i>
+          <span>Les Arcanes</span>
+        </a>
+      </div>
+
+      <nav class="sidebar__nav">
+        <a class="sidebar__link active" data-tab="overview">
+          <i class="ph ph-chart-pie-slice"></i>
+          <span>Tableau de bord</span>
+        </a>
+        <a class="sidebar__link" data-tab="appointments">
+          <i class="ph ph-calendar-check"></i>
+          <span>Rendez-vous</span>
+        </a>
+        <a class="sidebar__link" data-tab="refunds">
+          <i class="ph ph-arrow-counter-clockwise"></i>
+          <span>Remboursements</span>
+        </a>
+        <a class="sidebar__link" data-tab="clients">
+          <i class="ph ph-users"></i>
+          <span>Clients</span>
+        </a>
+        <a class="sidebar__link" data-tab="emails">
+          <i class="ph ph-envelope"></i>
+          <span>Emails</span>
+        </a>
+        <a class="sidebar__link" data-tab="social">
+          <i class="ph ph-share-network"></i>
+          <span>Réseaux sociaux</span>
+        </a>
+      </nav>
+
+      <div class="sidebar__footer">
+        <a href="index.html" class="sidebar__back-link">
+          <i class="ph ph-arrow-left"></i>
+          <span>Retour au site</span>
+        </a>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="dashboard__main">
+
+      <!-- Top Bar -->
+      <div class="topbar">
+        <button class="topbar__hamburger" id="hamburgerBtn" aria-label="Ouvrir le menu">
+          <i class="ph ph-list"></i>
+        </button>
+        <span class="topbar__title" id="topbarTitle">Tableau de bord</span>
+        <div class="topbar__user">
+          <span class="topbar__avatar">M</span>
+        </div>
+      </div>
+
+      <!-- Content -->
+      <div class="dashboard__content">
+
+        <!-- ========================================
+             SECTION: Tableau de bord (Overview)
+             ======================================== -->
+        <section class="dashboard__section active" id="section-overview">
+
+          <!-- KPIs -->
+          <div class="kpi-grid">
+            <div class="kpi-card">
+              <div class="kpi-card__icon kpi-card__icon--gold">
+                <i class="ph ph-currency-eur"></i>
+              </div>
+              <div class="kpi-card__info">
+                <p class="kpi-card__label">CA du mois</p>
+                <p class="kpi-card__value">1 250 €</p>
+                <p class="kpi-card__trend"><i class="ph ph-trend-up"></i> +12% vs mois dernier</p>
+              </div>
+            </div>
+
+            <div class="kpi-card">
+              <div class="kpi-card__icon kpi-card__icon--violet">
+                <i class="ph ph-calendar-check"></i>
+              </div>
+              <div class="kpi-card__info">
+                <p class="kpi-card__label">RDV cette semaine</p>
+                <p class="kpi-card__value">8</p>
+                <p class="kpi-card__trend"><i class="ph ph-trend-up"></i> +2 vs semaine dernière</p>
+              </div>
+            </div>
+
+            <div class="kpi-card">
+              <div class="kpi-card__icon kpi-card__icon--green">
+                <i class="ph ph-users"></i>
+              </div>
+              <div class="kpi-card__info">
+                <p class="kpi-card__label">Clients actifs</p>
+                <p class="kpi-card__value">23</p>
+                <p class="kpi-card__trend"><i class="ph ph-trend-up"></i> +3 ce mois</p>
+              </div>
+            </div>
+
+            <div class="kpi-card">
+              <div class="kpi-card__icon kpi-card__icon--blue">
+                <i class="ph ph-star"></i>
+              </div>
+              <div class="kpi-card__info">
+                <p class="kpi-card__label">Note moyenne</p>
+                <p class="kpi-card__value">4.8/5</p>
+                <p class="kpi-card__trend"><i class="ph ph-equals"></i> Stable</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dashboard Panels -->
+          <div class="dash-grid">
+
+            <!-- CA Chart -->
+            <div class="dash-panel">
+              <div class="dash-panel__header">
+                <h3 class="dash-panel__title">Évolution CA</h3>
+                <span class="dash-panel__link">6 derniers mois</span>
+              </div>
+              <div class="chart-placeholder">
+                <i class="ph ph-chart-line" style="font-size: 2rem; margin-right: 0.5rem;"></i>
+                Graphique CA (intégration Chart.js à venir)
+              </div>
+            </div>
+
+            <!-- Répartition Prestations -->
+            <div class="dash-panel">
+              <div class="dash-panel__header">
+                <h3 class="dash-panel__title">Répartition prestations</h3>
+              </div>
+              <div class="prestation-bar">
+                <div class="prestation-bar__label">
+                  <span>Tirage Flash (25 €)</span>
+                  <span>38%</span>
+                </div>
+                <div class="prestation-bar__track">
+                  <div class="prestation-bar__fill prestation-bar__fill--gold" style="width: 38%;"></div>
+                </div>
+              </div>
+              <div class="prestation-bar">
+                <div class="prestation-bar__label">
+                  <span>Guidance Complète (45 €)</span>
+                  <span>28%</span>
+                </div>
+                <div class="prestation-bar__track">
+                  <div class="prestation-bar__fill prestation-bar__fill--violet" style="width: 28%;"></div>
+                </div>
+              </div>
+              <div class="prestation-bar">
+                <div class="prestation-bar__label">
+                  <span>Tirage Approfondi (75 €)</span>
+                  <span>20%</span>
+                </div>
+                <div class="prestation-bar__track">
+                  <div class="prestation-bar__fill prestation-bar__fill--green" style="width: 20%;"></div>
+                </div>
+              </div>
+              <div class="prestation-bar">
+                <div class="prestation-bar__label">
+                  <span>Tirage Écrit (55 €)</span>
+                  <span>14%</span>
+                </div>
+                <div class="prestation-bar__track">
+                  <div class="prestation-bar__fill prestation-bar__fill--blue" style="width: 14%;"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- RDV de la semaine -->
+            <div class="dash-panel">
+              <div class="dash-panel__header">
+                <h3 class="dash-panel__title">RDV cette semaine</h3>
+                <a class="dash-panel__link" data-goto="appointments">Tout voir</a>
+              </div>
+              <ul class="mini-rdv-list">
+                <li class="mini-rdv-item">
+                  <div class="mini-rdv-item__info">
+                    <span class="mini-rdv-item__name">Sophie Martin</span>
+                    <span class="mini-rdv-item__detail">Guidance Complète — Lun 10 mars, 14h00</span>
+                  </div>
+                  <span class="badge badge--confirmed">Confirmé</span>
+                </li>
+                <li class="mini-rdv-item">
+                  <div class="mini-rdv-item__info">
+                    <span class="mini-rdv-item__name">Camille Dupont</span>
+                    <span class="mini-rdv-item__detail">Tirage Flash — Mar 11 mars, 10h00</span>
+                  </div>
+                  <span class="badge badge--confirmed">Confirmé</span>
+                </li>
+                <li class="mini-rdv-item">
+                  <div class="mini-rdv-item__info">
+                    <span class="mini-rdv-item__name">Élodie Rousseau</span>
+                    <span class="mini-rdv-item__detail">Tirage Approfondi — Mer 12 mars, 16h00</span>
+                  </div>
+                  <span class="badge badge--pending">En attente</span>
+                </li>
+                <li class="mini-rdv-item">
+                  <div class="mini-rdv-item__info">
+                    <span class="mini-rdv-item__name">Claire Lefevre</span>
+                    <span class="mini-rdv-item__detail">Tirage Écrit — Jeu 13 mars, 11h00</span>
+                  </div>
+                  <span class="badge badge--confirmed">Confirmé</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Suivi Remboursements -->
+            <div class="dash-panel">
+              <div class="dash-panel__header">
+                <h3 class="dash-panel__title">Suivi remboursements</h3>
+                <a class="dash-panel__link" data-goto="refunds">Détails</a>
+              </div>
+              <div class="refund-summary">
+                <div class="refund-summary__item">
+                  <p class="refund-summary__value">2</p>
+                  <p class="refund-summary__label">En attente</p>
+                </div>
+                <div class="refund-summary__item">
+                  <p class="refund-summary__value">145 €</p>
+                  <p class="refund-summary__label">Remboursé ce mois</p>
+                </div>
+                <div class="refund-summary__item">
+                  <p class="refund-summary__value">75 €</p>
+                  <p class="refund-summary__label">Retenu ce mois</p>
+                </div>
+                <div class="refund-summary__item">
+                  <p class="refund-summary__value">3.2%</p>
+                  <p class="refund-summary__label">Taux annulation</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- ========================================
+             SECTION: Rendez-vous
+             ======================================== -->
+        <section class="dashboard__section" id="section-appointments">
+          <div class="section-header">
+            <h2 class="section-header__title">Rendez-vous</h2>
+          </div>
+
+          <div class="dash-panel">
+            <div class="table-wrapper">
+              <table class="dash-table">
+                <thead>
+                  <tr>
+                    <th>Client</th>
+                    <th>Prestation</th>
+                    <th>Date &amp; Heure</th>
+                    <th>Montant</th>
+                    <th>Paiement</th>
+                    <th>Statut</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Sophie Martin</td>
+                    <td>Guidance Complète</td>
+                    <td>10 mars 2026, 14h00</td>
+                    <td>45 €</td>
+                    <td>Carte bancaire</td>
+                    <td><span class="badge badge--confirmed">Confirmé</span></td>
+                    <td>
+                      <div class="table-actions">
+                        <button class="btn-action btn-action--cancel"><i class="ph ph-x"></i> Annuler</button>
+                        <button class="btn-action btn-action--refund"><i class="ph ph-arrow-counter-clockwise"></i> Rembourser</button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Camille Dupont</td>
+                    <td>Tirage Flash</td>
+                    <td>11 mars 2026, 10h00</td>
+                    <td>25 €</td>
+                    <td>PayPal</td>
+                    <td><span class="badge badge--confirmed">Confirmé</span></td>
+                    <td>
+                      <div class="table-actions">
+                        <button class="btn-action btn-action--cancel"><i class="ph ph-x"></i> Annuler</button>
+                        <button class="btn-action btn-action--refund"><i class="ph ph-arrow-counter-clockwise"></i> Rembourser</button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Élodie Rousseau</td>
+                    <td>Tirage Approfondi</td>
+                    <td>12 mars 2026, 16h00</td>
+                    <td>75 €</td>
+                    <td>Carte bancaire</td>
+                    <td><span class="badge badge--pending">En attente</span></td>
+                    <td>
+                      <div class="table-actions">
+                        <button class="btn-action btn-action--cancel"><i class="ph ph-x"></i> Annuler</button>
+                        <button class="btn-action btn-action--refund"><i class="ph ph-arrow-counter-clockwise"></i> Rembourser</button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Claire Lefevre</td>
+                    <td>Tirage Écrit</td>
+                    <td>13 mars 2026, 11h00</td>
+                    <td>55 €</td>
+                    <td>Carte bancaire</td>
+                    <td><span class="badge badge--confirmed">Confirmé</span></td>
+                    <td>
+                      <div class="table-actions">
+                        <button class="btn-action btn-action--cancel"><i class="ph ph-x"></i> Annuler</button>
+                        <button class="btn-action btn-action--refund"><i class="ph ph-arrow-counter-clockwise"></i> Rembourser</button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Nathalie Moreau</td>
+                    <td>Guidance Complète</td>
+                    <td>14 mars 2026, 15h00</td>
+                    <td>45 €</td>
+                    <td>PayPal</td>
+                    <td><span class="badge badge--pending">En attente</span></td>
+                    <td>
+                      <div class="table-actions">
+                        <button class="btn-action btn-action--cancel"><i class="ph ph-x"></i> Annuler</button>
+                        <button class="btn-action btn-action--refund"><i class="ph ph-arrow-counter-clockwise"></i> Rembourser</button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Isabelle Girard</td>
+                    <td>Tirage Flash</td>
+                    <td>7 mars 2026, 09h30</td>
+                    <td>25 €</td>
+                    <td>Carte bancaire</td>
+                    <td><span class="badge badge--cancelled">Annulé</span></td>
+                    <td>
+                      <div class="table-actions">
+                        <button class="btn-action btn-action--refund"><i class="ph ph-arrow-counter-clockwise"></i> Rembourser</button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Aurélie Bernard</td>
+                    <td>Tirage Approfondi</td>
+                    <td>5 mars 2026, 14h00</td>
+                    <td>75 €</td>
+                    <td>Carte bancaire</td>
+                    <td><span class="badge badge--refunded">Remboursé</span></td>
+                    <td>
+                      <div class="table-actions">
+                        <button class="btn-action btn-action--view"><i class="ph ph-eye"></i> Voir</button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Marie Dubois</td>
+                    <td>Tirage Écrit</td>
+                    <td>6 mars 2026, 17h00</td>
+                    <td>55 €</td>
+                    <td>PayPal</td>
+                    <td><span class="badge badge--cancelled">Annulé</span></td>
+                    <td>
+                      <div class="table-actions">
+                        <button class="btn-action btn-action--refund"><i class="ph ph-arrow-counter-clockwise"></i> Rembourser</button>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ========================================
+             SECTION: Remboursements
+             ======================================== -->
+        <section class="dashboard__section" id="section-refunds">
+          <div class="section-header">
+            <h2 class="section-header__title">Remboursements</h2>
+          </div>
+
+          <!-- Grille de remboursement -->
+          <div class="refund-grille">
+            <h3 class="refund-grille__title"><i class="ph ph-info"></i> Grille de remboursement</h3>
+            <div class="refund-grille__row">
+              <span class="refund-grille__delay">Annulation &gt; 48h avant le RDV</span>
+              <span class="refund-grille__percent" style="color: #27AE60;">100% remboursé</span>
+            </div>
+            <div class="refund-grille__row">
+              <span class="refund-grille__delay">Annulation 24h — 48h avant le RDV</span>
+              <span class="refund-grille__percent" style="color: #F39C12;">50% remboursé</span>
+            </div>
+            <div class="refund-grille__row">
+              <span class="refund-grille__delay">Annulation &lt; 24h avant le RDV</span>
+              <span class="refund-grille__percent" style="color: #E74C3C;">0% remboursé</span>
+            </div>
+          </div>
+
+          <!-- Stats -->
+          <div class="refund-stats">
+            <div class="refund-stat-card">
+              <p class="refund-stat-card__value refund-stat-card__value--gold">4</p>
+              <p class="refund-stat-card__label">Total demandes</p>
+            </div>
+            <div class="refund-stat-card">
+              <p class="refund-stat-card__value refund-stat-card__value--green">145 €</p>
+              <p class="refund-stat-card__label">Montant remboursé</p>
+            </div>
+            <div class="refund-stat-card">
+              <p class="refund-stat-card__value refund-stat-card__value--orange">75 €</p>
+              <p class="refund-stat-card__label">Montant retenu</p>
+            </div>
+          </div>
+
+          <!-- Demandes en attente -->
+          <div class="dash-panel" style="margin-bottom: var(--space-sm);">
+            <div class="dash-panel__header">
+              <h3 class="dash-panel__title">Demandes en attente</h3>
+            </div>
+            <div class="table-wrapper">
+              <table class="dash-table" style="min-width: 900px;">
+                <thead>
+                  <tr>
+                    <th>Client</th>
+                    <th>Prestation</th>
+                    <th>Date RDV</th>
+                    <th>Date demande</th>
+                    <th>Délai</th>
+                    <th>Montant initial</th>
+                    <th>Montant remb.</th>
+                    <th>Paiement</th>
+                    <th>Statut</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Isabelle Girard</td>
+                    <td>Tirage Flash</td>
+                    <td>7 mars 2026</td>
+                    <td>5 mars 2026</td>
+                    <td><span class="badge badge--confirmed">&gt;48h</span></td>
+                    <td>25 €</td>
+                    <td>25 €</td>
+                    <td>Carte bancaire</td>
+                    <td><span class="badge badge--pending">En attente</span></td>
+                    <td>
+                      <div class="table-actions">
+                        <button class="btn-action btn-action--approve"><i class="ph ph-check"></i> Valider</button>
+                        <button class="btn-action btn-action--reject"><i class="ph ph-x"></i> Refuser</button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Marie Dubois</td>
+                    <td>Tirage Écrit</td>
+                    <td>6 mars 2026</td>
+                    <td>5 mars 2026</td>
+                    <td><span class="badge badge--pending">24-48h</span></td>
+                    <td>55 €</td>
+                    <td>27,50 €</td>
+                    <td>PayPal</td>
+                    <td><span class="badge badge--pending">En attente</span></td>
+                    <td>
+                      <div class="table-actions">
+                        <button class="btn-action btn-action--approve"><i class="ph ph-check"></i> Valider</button>
+                        <button class="btn-action btn-action--reject"><i class="ph ph-x"></i> Refuser</button>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Historique -->
+          <div class="dash-panel">
+            <div class="dash-panel__header">
+              <h3 class="dash-panel__title">Historique des remboursements</h3>
+            </div>
+            <div class="table-wrapper">
+              <table class="dash-table" style="min-width: 900px;">
+                <thead>
+                  <tr>
+                    <th>Client</th>
+                    <th>Prestation</th>
+                    <th>Date RDV</th>
+                    <th>Date demande</th>
+                    <th>Délai</th>
+                    <th>Montant initial</th>
+                    <th>Montant remb.</th>
+                    <th>Paiement</th>
+                    <th>Statut</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Aurélie Bernard</td>
+                    <td>Tirage Approfondi</td>
+                    <td>5 mars 2026</td>
+                    <td>2 mars 2026</td>
+                    <td><span class="badge badge--confirmed">&gt;48h</span></td>
+                    <td>75 €</td>
+                    <td>75 €</td>
+                    <td>Carte bancaire</td>
+                    <td><span class="badge badge--processed">Remboursé</span></td>
+                  </tr>
+                  <tr>
+                    <td>Laura Petit</td>
+                    <td>Guidance Complète</td>
+                    <td>28 fév. 2026</td>
+                    <td>27 fév. 2026</td>
+                    <td><span class="badge badge--cancelled">&lt;24h</span></td>
+                    <td>45 €</td>
+                    <td>0 €</td>
+                    <td>Carte bancaire</td>
+                    <td><span class="badge badge--rejected">Refusé</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ========================================
+             SECTION: Clients
+             ======================================== -->
+        <section class="dashboard__section" id="section-clients">
+          <div class="section-header">
+            <h2 class="section-header__title">Clients</h2>
+          </div>
+
+          <div class="clients-grid">
+
+            <!-- Client 1 -->
+            <div class="client-card">
+              <div class="client-card__header">
+                <div class="client-card__avatar">SM</div>
+                <div>
+                  <p class="client-card__name">Sophie Martin</p>
+                  <p class="client-card__email">sophie.martin@email.fr</p>
+                </div>
+              </div>
+              <div class="client-card__stats">
+                <div class="client-card__stat">
+                  <p class="client-card__stat-value">5</p>
+                  <p class="client-card__stat-label">Séances</p>
+                </div>
+                <div class="client-card__stat">
+                  <p class="client-card__stat-value">245 €</p>
+                  <p class="client-card__stat-label">Total</p>
+                </div>
+                <div class="client-card__stat">
+                  <p class="client-card__stat-value">4.9</p>
+                  <p class="client-card__stat-label">Note</p>
+                </div>
+              </div>
+              <p class="client-card__history-title">Dernières séances</p>
+              <div class="client-card__history-item">
+                <span>Guidance Complète</span>
+                <span>10 mars 2026</span>
+                <span>45 €</span>
+              </div>
+              <div class="client-card__history-item">
+                <span>Tirage Approfondi</span>
+                <span>15 fév. 2026</span>
+                <span>75 €</span>
+              </div>
+              <div class="client-card__history-item">
+                <span>Tirage Flash</span>
+                <span>20 jan. 2026</span>
+                <span>25 €</span>
+              </div>
+            </div>
+
+            <!-- Client 2 -->
+            <div class="client-card">
+              <div class="client-card__header">
+                <div class="client-card__avatar">CD</div>
+                <div>
+                  <p class="client-card__name">Camille Dupont</p>
+                  <p class="client-card__email">camille.dupont@email.fr</p>
+                </div>
+              </div>
+              <div class="client-card__stats">
+                <div class="client-card__stat">
+                  <p class="client-card__stat-value">3</p>
+                  <p class="client-card__stat-label">Séances</p>
+                </div>
+                <div class="client-card__stat">
+                  <p class="client-card__stat-value">95 €</p>
+                  <p class="client-card__stat-label">Total</p>
+                </div>
+                <div class="client-card__stat">
+                  <p class="client-card__stat-value">5.0</p>
+                  <p class="client-card__stat-label">Note</p>
+                </div>
+              </div>
+              <p class="client-card__history-title">Dernières séances</p>
+              <div class="client-card__history-item">
+                <span>Tirage Flash</span>
+                <span>11 mars 2026</span>
+                <span>25 €</span>
+              </div>
+              <div class="client-card__history-item">
+                <span>Guidance Complète</span>
+                <span>8 fév. 2026</span>
+                <span>45 €</span>
+              </div>
+            </div>
+
+            <!-- Client 3 -->
+            <div class="client-card">
+              <div class="client-card__header">
+                <div class="client-card__avatar">ER</div>
+                <div>
+                  <p class="client-card__name">Élodie Rousseau</p>
+                  <p class="client-card__email">elodie.rousseau@email.fr</p>
+                </div>
+              </div>
+              <div class="client-card__stats">
+                <div class="client-card__stat">
+                  <p class="client-card__stat-value">7</p>
+                  <p class="client-card__stat-label">Séances</p>
+                </div>
+                <div class="client-card__stat">
+                  <p class="client-card__stat-value">420 €</p>
+                  <p class="client-card__stat-label">Total</p>
+                </div>
+                <div class="client-card__stat">
+                  <p class="client-card__stat-value">4.7</p>
+                  <p class="client-card__stat-label">Note</p>
+                </div>
+              </div>
+              <p class="client-card__history-title">Dernières séances</p>
+              <div class="client-card__history-item">
+                <span>Tirage Approfondi</span>
+                <span>12 mars 2026</span>
+                <span>75 €</span>
+              </div>
+              <div class="client-card__history-item">
+                <span>Tirage Écrit</span>
+                <span>22 fév. 2026</span>
+                <span>55 €</span>
+              </div>
+              <div class="client-card__history-item">
+                <span>Tirage Flash</span>
+                <span>5 fév. 2026</span>
+                <span>25 €</span>
+              </div>
+            </div>
+
+            <!-- Client 4 -->
+            <div class="client-card">
+              <div class="client-card__header">
+                <div class="client-card__avatar">CL</div>
+                <div>
+                  <p class="client-card__name">Claire Lefevre</p>
+                  <p class="client-card__email">claire.lefevre@email.fr</p>
+                </div>
+              </div>
+              <div class="client-card__stats">
+                <div class="client-card__stat">
+                  <p class="client-card__stat-value">2</p>
+                  <p class="client-card__stat-label">Séances</p>
+                </div>
+                <div class="client-card__stat">
+                  <p class="client-card__stat-value">100 €</p>
+                  <p class="client-card__stat-label">Total</p>
+                </div>
+                <div class="client-card__stat">
+                  <p class="client-card__stat-value">4.5</p>
+                  <p class="client-card__stat-label">Note</p>
+                </div>
+              </div>
+              <p class="client-card__history-title">Dernières séances</p>
+              <div class="client-card__history-item">
+                <span>Tirage Écrit</span>
+                <span>13 mars 2026</span>
+                <span>55 €</span>
+              </div>
+              <div class="client-card__history-item">
+                <span>Guidance Complète</span>
+                <span>1 mars 2026</span>
+                <span>45 €</span>
+              </div>
+            </div>
+
+            <!-- Client 5 -->
+            <div class="client-card">
+              <div class="client-card__header">
+                <div class="client-card__avatar">NM</div>
+                <div>
+                  <p class="client-card__name">Nathalie Moreau</p>
+                  <p class="client-card__email">nathalie.moreau@email.fr</p>
+                </div>
+              </div>
+              <div class="client-card__stats">
+                <div class="client-card__stat">
+                  <p class="client-card__stat-value">1</p>
+                  <p class="client-card__stat-label">Séances</p>
+                </div>
+                <div class="client-card__stat">
+                  <p class="client-card__stat-value">45 €</p>
+                  <p class="client-card__stat-label">Total</p>
+                </div>
+                <div class="client-card__stat">
+                  <p class="client-card__stat-value">—</p>
+                  <p class="client-card__stat-label">Note</p>
+                </div>
+              </div>
+              <p class="client-card__history-title">Dernières séances</p>
+              <div class="client-card__history-item">
+                <span>Guidance Complète</span>
+                <span>14 mars 2026</span>
+                <span>45 €</span>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- ========================================
+             SECTION: Emails
+             ======================================== -->
+        <section class="dashboard__section" id="section-emails">
+          <div class="section-header">
+            <h2 class="section-header__title">Modèles d'emails</h2>
+          </div>
+
+          <div class="email-grid">
+
+            <!-- Confirmation -->
+            <div class="email-card">
+              <div class="email-card__header">
+                <div class="email-card__icon email-card__icon--confirm">
+                  <i class="ph ph-check-circle"></i>
+                </div>
+                <div>
+                  <p class="email-card__title">Confirmation de réservation</p>
+                  <p class="email-card__subject">Objet : Votre rendez-vous est confirmé</p>
+                </div>
+              </div>
+              <p class="email-card__preview">Bonjour {prénom},<br><br>Votre rendez-vous pour un(e) {prestation} est confirmé le {date} à {heure}. Vous recevrez le lien de connexion 15 minutes avant la séance.<br><br>À très bientôt,<br>Mélanie</p>
+              <div class="email-card__actions">
+                <button class="btn-action btn-action--view"><i class="ph ph-eye"></i> Aperçu</button>
+                <button class="btn-action btn-action--approve"><i class="ph ph-pencil"></i> Modifier</button>
+              </div>
+            </div>
+
+            <!-- Rappel -->
+            <div class="email-card">
+              <div class="email-card__header">
+                <div class="email-card__icon email-card__icon--reminder">
+                  <i class="ph ph-bell"></i>
+                </div>
+                <div>
+                  <p class="email-card__title">Rappel de rendez-vous</p>
+                  <p class="email-card__subject">Objet : Rappel — votre séance demain</p>
+                </div>
+              </div>
+              <p class="email-card__preview">Bonjour {prénom},<br><br>Un petit rappel : votre séance {prestation} a lieu demain le {date} à {heure}. Préparez un endroit calme et une question qui vous tient à coeur.<br><br>À demain,<br>Mélanie</p>
+              <div class="email-card__actions">
+                <button class="btn-action btn-action--view"><i class="ph ph-eye"></i> Aperçu</button>
+                <button class="btn-action btn-action--approve"><i class="ph ph-pencil"></i> Modifier</button>
+              </div>
+            </div>
+
+            <!-- Remboursement -->
+            <div class="email-card">
+              <div class="email-card__header">
+                <div class="email-card__icon email-card__icon--refund">
+                  <i class="ph ph-arrow-counter-clockwise"></i>
+                </div>
+                <div>
+                  <p class="email-card__title">Confirmation de remboursement</p>
+                  <p class="email-card__subject">Objet : Votre remboursement a été traité</p>
+                </div>
+              </div>
+              <p class="email-card__preview">Bonjour {prénom},<br><br>Suite à l'annulation de votre {prestation} du {date}, un remboursement de {montant} € a été effectué. Le virement sera visible sous 5 à 10 jours ouvrés.<br><br>Cordialement,<br>Mélanie</p>
+              <div class="email-card__actions">
+                <button class="btn-action btn-action--view"><i class="ph ph-eye"></i> Aperçu</button>
+                <button class="btn-action btn-action--approve"><i class="ph ph-pencil"></i> Modifier</button>
+              </div>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="email-card">
+              <div class="email-card__header">
+                <div class="email-card__icon email-card__icon--newsletter">
+                  <i class="ph ph-newspaper"></i>
+                </div>
+                <div>
+                  <p class="email-card__title">Newsletter mensuelle</p>
+                  <p class="email-card__subject">Objet : Les énergies du mois de {mois}</p>
+                </div>
+              </div>
+              <p class="email-card__preview">Bonjour {prénom},<br><br>Découvrez les énergies dominantes de ce mois de {mois} et mes conseils pour naviguer les influences cosmiques. La carte du mois : {carte}...<br><br>Lumineusement,<br>Mélanie</p>
+              <div class="email-card__actions">
+                <button class="btn-action btn-action--view"><i class="ph ph-eye"></i> Aperçu</button>
+                <button class="btn-action btn-action--approve"><i class="ph ph-pencil"></i> Modifier</button>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- ========================================
+             SECTION: Réseaux sociaux
+             ======================================== -->
+        <section class="dashboard__section" id="section-social">
+          <div class="section-header">
+            <h2 class="section-header__title">Templates réseaux sociaux</h2>
+          </div>
+
+          <div class="social-grid">
+
+            <!-- Instagram - Témoignage -->
+            <div class="social-card">
+              <div class="social-card__header">
+                <div class="social-card__platform social-card__platform--instagram">
+                  <i class="ph ph-instagram-logo"></i>
+                </div>
+                <div>
+                  <p class="social-card__title">Témoignage client</p>
+                  <p class="social-card__type">Instagram — Carrousel</p>
+                </div>
+              </div>
+              <div class="social-card__content">"Grâce à Mélanie, j'ai pu y voir plus clair dans ma situation. Sa bienveillance et la justesse de son tirage m'ont vraiment touchée." — Sophie M.
+
+Merci Sophie pour ta confiance. Chaque tirage est un moment sacré que je prends à coeur.</div>
+              <p class="social-card__hashtags">#tarot #guidance #tarologue #tirage #arcanes #spiritualité #developpementpersonnel</p>
+              <div class="social-card__actions">
+                <button class="btn-action btn-action--view"><i class="ph ph-copy"></i> Copier</button>
+                <button class="btn-action btn-action--approve"><i class="ph ph-pencil"></i> Modifier</button>
+              </div>
+            </div>
+
+            <!-- Instagram - Carte du jour -->
+            <div class="social-card">
+              <div class="social-card__header">
+                <div class="social-card__platform social-card__platform--instagram">
+                  <i class="ph ph-instagram-logo"></i>
+                </div>
+                <div>
+                  <p class="social-card__title">Carte du jour</p>
+                  <p class="social-card__type">Instagram — Post unique</p>
+                </div>
+              </div>
+              <div class="social-card__content">La carte du jour : L'Étoile
+
+L'Étoile vous invite à garder espoir et à faire confiance au chemin qui se dessine. C'est un moment de renouveau, de sérénité intérieure.
+
+Quelle est votre intention pour cette journée ?</div>
+              <p class="social-card__hashtags">#cartedujourr #tarot #létoile #espoir #guidance #spiritualité #tarologie</p>
+              <div class="social-card__actions">
+                <button class="btn-action btn-action--view"><i class="ph ph-copy"></i> Copier</button>
+                <button class="btn-action btn-action--approve"><i class="ph ph-pencil"></i> Modifier</button>
+              </div>
+            </div>
+
+            <!-- Facebook - Promo -->
+            <div class="social-card">
+              <div class="social-card__header">
+                <div class="social-card__platform social-card__platform--facebook">
+                  <i class="ph ph-facebook-logo"></i>
+                </div>
+                <div>
+                  <p class="social-card__title">Offre spéciale</p>
+                  <p class="social-card__type">Facebook — Publication</p>
+                </div>
+              </div>
+              <div class="social-card__content">Envie de clarté ?
+
+Ce mois-ci, profitez d'un Tirage Flash à 25 € pour poser votre question et recevoir une réponse claire et bienveillante.
+
+Réservez votre créneau via le lien en bio ou sur lesarcanesdemelanie.fr</div>
+              <p class="social-card__hashtags">#tirage #tarot #offre #guidance #tarologue #consultation</p>
+              <div class="social-card__actions">
+                <button class="btn-action btn-action--view"><i class="ph ph-copy"></i> Copier</button>
+                <button class="btn-action btn-action--approve"><i class="ph ph-pencil"></i> Modifier</button>
+              </div>
+            </div>
+
+            <!-- TikTok -->
+            <div class="social-card">
+              <div class="social-card__header">
+                <div class="social-card__platform social-card__platform--tiktok">
+                  <i class="ph ph-tiktok-logo"></i>
+                </div>
+                <div>
+                  <p class="social-card__title">Coulisses d'une séance</p>
+                  <p class="social-card__type">TikTok — Vidéo courte</p>
+                </div>
+              </div>
+              <div class="social-card__content">Script : "Comment se passe une séance de tarot ?"
+
+1. Je me connecte à votre énergie
+2. Je tire les cartes selon votre question
+3. Je vous transmets les messages avec bienveillance
+4. On échange ensemble sur ce qui résonne
+
+Durée : 30-60 sec. — Ambiance tamisée, bougies, cartes visibles</div>
+              <p class="social-card__hashtags">#tarottok #tarot #coulisses #spiritualtiktok #guidance #voyance</p>
+              <div class="social-card__actions">
+                <button class="btn-action btn-action--view"><i class="ph ph-copy"></i> Copier</button>
+                <button class="btn-action btn-action--approve"><i class="ph ph-pencil"></i> Modifier</button>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+      </div><!-- /.dashboard__content -->
+    </main>
+  </div><!-- /.dashboard -->
+
+  <!-- ========================================
+       Dashboard JavaScript
+       ======================================== -->
+  <script>
+    (function () {
+      // Elements
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('sidebarOverlay');
+      const hamburger = document.getElementById('hamburgerBtn');
+      const topbarTitle = document.getElementById('topbarTitle');
+      const sidebarLinks = document.querySelectorAll('.sidebar__link[data-tab]');
+      const sections = document.querySelectorAll('.dashboard__section');
+      const gotoLinks = document.querySelectorAll('[data-goto]');
+
+      // Tab titles mapping
+      const tabTitles = {
+        overview: 'Tableau de bord',
+        appointments: 'Rendez-vous',
+        refunds: 'Remboursements',
+        clients: 'Clients',
+        emails: 'Emails',
+        social: 'Réseaux sociaux'
+      };
+
+      // Toggle sidebar (mobile)
+      function openSidebar() {
+        sidebar.classList.add('open');
+        overlay.classList.add('visible');
+      }
+
+      function closeSidebar() {
+        sidebar.classList.remove('open');
+        overlay.classList.remove('visible');
+      }
+
+      hamburger.addEventListener('click', function () {
+        if (sidebar.classList.contains('open')) {
+          closeSidebar();
+        } else {
+          openSidebar();
+        }
+      });
+
+      overlay.addEventListener('click', closeSidebar);
+
+      // Tab switching
+      function switchTab(tabId) {
+        // Update sidebar active state
+        sidebarLinks.forEach(function (link) {
+          link.classList.toggle('active', link.getAttribute('data-tab') === tabId);
+        });
+
+        // Show/hide sections
+        sections.forEach(function (section) {
+          var sectionId = section.id.replace('section-', '');
+          section.classList.toggle('active', sectionId === tabId);
+        });
+
+        // Update topbar title
+        topbarTitle.textContent = tabTitles[tabId] || 'Tableau de bord';
+
+        // Close sidebar on mobile
+        closeSidebar();
+
+        // Scroll to top
+        window.scrollTo(0, 0);
+      }
+
+      // Sidebar link clicks
+      sidebarLinks.forEach(function (link) {
+        link.addEventListener('click', function () {
+          var tabId = this.getAttribute('data-tab');
+          switchTab(tabId);
+        });
+      });
+
+      // "Tout voir" / "Détails" links inside panels
+      gotoLinks.forEach(function (link) {
+        link.addEventListener('click', function () {
+          var tabId = this.getAttribute('data-goto');
+          switchTab(tabId);
+        });
+      });
+
+    })();
+  </script>
+
+</body>
+</html>

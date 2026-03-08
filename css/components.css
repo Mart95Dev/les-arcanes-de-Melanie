@@ -704,6 +704,60 @@
 }
 
 /* ============================================
+   Bouton Danger (annulation/remboursement)
+   ============================================ */
+.btn--danger {
+  background: var(--color-danger);
+  color: #ffffff;
+}
+
+.btn--danger:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+
+/* ============================================
+   Badges de statut
+   ============================================ */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--font-ui);
+  font-size: 0.625rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+}
+
+.badge--confirmed {
+  background: rgba(39, 174, 96, 0.15);
+  color: var(--color-success);
+  border: 1px solid rgba(39, 174, 96, 0.3);
+}
+
+.badge--pending {
+  background: rgba(243, 156, 18, 0.15);
+  color: var(--color-warning);
+  border: 1px solid rgba(243, 156, 18, 0.3);
+}
+
+.badge--cancelled {
+  background: rgba(231, 76, 60, 0.15);
+  color: var(--color-danger);
+  border: 1px solid rgba(231, 76, 60, 0.3);
+}
+
+.badge--refunded {
+  background: rgba(52, 152, 219, 0.15);
+  color: var(--color-info);
+  border: 1px solid rgba(52, 152, 219, 0.3);
+}
+
+/* ============================================
    Utilitaires
    ============================================ */
 .text-gold { color: var(--color-gold); }
